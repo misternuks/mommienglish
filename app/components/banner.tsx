@@ -4,9 +4,9 @@ export default function Banner() {
   return (
     <section className = {styles.banner} >
       <div className = {styles['banner-hero']}>
-        <h1>
-          ママが<span className='red-text'>笑</span>っていれば</h1>
-          <h1>それだけで<span className='red-text'>嬉</span>しい。</h1>
+        <h2>
+          ママが<span className='red-text'>笑</span>っていれば</h2>
+          <h2>それだけで<span className='red-text'>嬉</span>しい。</h2>
       <button className='red-button'>
         お問い合わせはこちら
       </button>

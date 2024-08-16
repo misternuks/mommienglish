@@ -8,10 +8,21 @@
   font-style: normal;
 }
 
-h1 {
-  font-size: 2rem;
+* {
   color: #5F5F5F;
+}
+
+h1, h2 {
   font-weight: 700;
+  border-bottom: dashed #5F5F5F;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .navbar {
