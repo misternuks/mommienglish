@@ -14,10 +14,6 @@ h1 {
   font-weight: 700;
 }
 
-.banner h1 {
-  border-bottom: dashed #5F5F5F;
-}
-
 .navbar {
   display: flex;
   gap: 2rem;
@@ -34,37 +30,6 @@ h1 {
 
 .navbar li a:hover {
   color: #FFD6DD;
-}
-
-.banner {
-  height: 100vh;
-  width: 100%;
-  background-color: #FFD6DD;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 64px;
-  background-image: url('/images/banner_image.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top left;
-
-}
-
-.banner-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 64px;
-}
-
-.banner-buttons {
-  margin-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
 }
 
 .red-text {
