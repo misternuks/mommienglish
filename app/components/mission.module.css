@@ -1,0 +1,39 @@
+.mission {
+  background-color: #FFD6DD;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 64px;
+  gap: 64px;
+  width: 100%;
+}
+
+.mission-column-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.mission-column {
+  width: 33%;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+  min-width: 300px;
+  max-width: 320px;
+  box-sizing: border-box;
+  padding: 16px;
+ }
+
+ .mission-image {
+  margin-bottom: 32px;
+ }
