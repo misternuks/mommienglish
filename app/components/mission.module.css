@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 64px;
+  padding: 64px 0px;
   gap: 64px;
   width: 100%;
 }
@@ -36,4 +36,15 @@
 
  .mission-image {
   margin-bottom: 32px;
+ }
+
+ .mission-english-banner {
+  background-color: #FFD6DD;
+  width: 100%;
+  height: 400px;
+  background-image: url('/images/english_image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 64px;
  }

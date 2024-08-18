@@ -5,7 +5,7 @@ export default function Mission() {
   return (
     <section className = {styles.mission} >
       <div>
-        <h5>Our <span className = 'red-text'>M</span>ission</h5>
+        <h2>Our <span className = 'red-text'>M</span>ission</h2>
       </div>
       <div className = {styles['mission-column-container']} >
         <div className = {styles['mission-column']} >
@@ -55,6 +55,9 @@ export default function Mission() {
             英語の最大の目的です。
           </p>
         </div>
+      </div>
+      <div className = {styles['mission-english-banner']}>
+
       </div>
     </section>
   );
