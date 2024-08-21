@@ -7,7 +7,7 @@ export default function Banner() {
         <h2>
           ママが<span className='red-text'>笑</span>っていれば</h2>
           <h2>それだけで<span className='red-text'>嬉</span>しい。</h2>
-      <button className='red-button'>
+      <button style={{ marginTop: 64 }} className='red-button'>
         お問い合わせはこちら
       </button>
       </div>

@@ -1,0 +1,57 @@
+.fee {
+  background-color: #FFECEC;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 64px;
+  gap: 64px;
+}
+
+.fee-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+}
+
+.fee-content-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 16px;
+}
+
+.fee-list-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.fee-list-number {
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;;
+  font-size: 22px;
+  color: white;
+  font-weight: 700;
+  background-color: #0CC;
+  padding: 8px 20px;
+  text-align: center;
+}
+
+.fee-money-text {
+  align-self: self-end;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FF5757;
+  text-shadow:
+    -3px -3px 0 white,
+    3px -3px 0 white,
+    3px 3px 0 white,
+    3px 3px 0 white;
+  border: 0;
+
+}

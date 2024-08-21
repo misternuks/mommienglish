@@ -1,11 +1,21 @@
 .concept {
   background-color: #FFECEC;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: start;
   align-items: start;
   padding: 64px;
   gap: 64px;
+  background-image: url('/images/me_bg_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1000px) {
+  .concept {
+    padding-left: 240px;
+  }
 }
 
 .concept-vertical-text-container {
@@ -13,6 +23,7 @@
   flex-direction: row-reverse;
   align-items: start;
   gap: 1rem;
+  flex-wrap: nowrap;
 
 }
 
