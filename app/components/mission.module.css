@@ -20,7 +20,7 @@
 }
 
 .mission-column {
-  width: 33%;
+  max-width: 320px;
   display: flex;
   flex: auto;
   flex-direction: column;
@@ -28,8 +28,6 @@
   align-items: center;
   justify-content: start;
   flex: 1;
-  min-width: 300px;
-  max-width: 320px;
   box-sizing: border-box;
   padding: 16px;
  }
@@ -51,14 +49,19 @@
 
 @media (max-width: 600px) {
   .mission {
-    padding: 0;
+    padding: 0px;
   }
   .mission-column-container {
     gap: 8px;
+    padding: 8px;
+  }
+
+  .mission-column {
+    min-width: 100%;
   }
 
   .mission-english-banner {
     background-size: contain;
-    margin-bottom: 0;
+    height: 240px;
   }
 }

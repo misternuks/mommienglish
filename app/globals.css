@@ -82,3 +82,10 @@ li {
   background-color: #FFECEC;
   padding: 16px 8px;
 }
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
