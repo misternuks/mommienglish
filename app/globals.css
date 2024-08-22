@@ -17,6 +17,7 @@ h1, h2{
   border-bottom: dashed #5F5F5F;
   padding-bottom: 8px;
   display: inline;
+  line-height: 2;
 }
 
 h1 {

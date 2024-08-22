@@ -16,10 +16,10 @@ export default function Banner() {
             height={150}
             className={styles['']}
           />
-          <h2>
-            ママが<span className = 'red-text'>笑</span>っていれば<br />
-            それだけで<span className = 'red-text'>嬉</span>しい。
-          </h2>
+          <div>
+          <h2>ママが<span className = 'red-text'>笑</span>っていれば</h2><br />
+          <h2>それだけで<span className = 'red-text'>嬉</span>しい。</h2>
+          </div>
           <button className = 'red-button'>
             お問い合わせはこちら
           </button>
