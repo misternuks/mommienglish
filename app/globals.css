@@ -16,6 +16,7 @@ h1, h2{
   font-weight: 700;
   border-bottom: dashed #5F5F5F;
   padding-bottom: 8px;
+  display: inline;
 }
 
 h1 {
@@ -67,7 +68,6 @@ h5 {
 }
 
 .red-box {
-  min-width: max-content;
   background-color: #FF5757;
   color: white;
   border-radius: 16px;

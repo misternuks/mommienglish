@@ -48,4 +48,8 @@
   .service {
     padding: 16px;
   }
+
+  .service-feature-column {
+    max-width: 100%;
+  }
 }

@@ -5,11 +5,14 @@ export default function Concept() {
     <section id='concept' className = {styles.concept} >
       <div className = {styles['concept-vertical-text-container']}>
         <div className = {styles['concept-vertical-text']}>ママのための</div>
-        <div className = {styles['concept-vertical-text']}>英語習慣化プログラムです</div>
+        <div className = {styles['concept-vertical-text']}>英語習慣化プログラム</div>
       </div>
       <div className = {styles['concept-horizontal-text-container']}>
+        <div className = {styles['concept-title']}>
           <h1>子どもと一緒に</h1>
           <h1>親子の英会話を楽しむ</h1>
+        </div>
+        <div className = {styles['concept-paragraph']}>
           <p>
             留学してから気づいた、実用性のない中学・高校英語。
             子どもができてから知った、ママと子どもの信頼関係。
@@ -19,6 +22,7 @@ export default function Concept() {
             子どもだけが頑張るのではなく、ママだけが悩むのではない。
             親子両想い型の英語共育を広げたい。
           </p>
+        </div>
       </div>
     </section>
   );
