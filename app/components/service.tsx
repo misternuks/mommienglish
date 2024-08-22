@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Service() {
   return (
-    <section className = {styles.service} >
+    <section id='service' className = {styles.service} >
       <div>
         <h2>サービス<span className = 'red-text'>内</span>容</h2>
       </div>

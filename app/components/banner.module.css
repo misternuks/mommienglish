@@ -5,7 +5,7 @@
   background-color: #FFD6DD;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: end;
   padding: 64px;
   background-image: url('/images/banner_image.png');
   background-size: contain;
@@ -27,4 +27,15 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
+}
+
+.banner-logo {
+  align-self: end;
+  margin-right: 64px;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding: 0 0 60px 0;
+  }
 }

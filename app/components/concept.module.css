@@ -48,3 +48,9 @@
 .concept p {
   margin-top: 64px;
 }
+
+@media (max-width: 600px) {
+  .concept {
+    padding: 16px;
+  }
+}

@@ -38,7 +38,7 @@
   margin-bottom: 32px;
  }
 
- .mission-english-banner {
+.mission-english-banner {
   background-color: #FFD6DD;
   width: 100%;
   height: 400px;
@@ -48,3 +48,17 @@
   background-position: center;
   margin-bottom: 64px;
  }
+
+@media (max-width: 600px) {
+  .mission {
+    padding: 0;
+  }
+  .mission-column-container {
+    gap: 8px;
+  }
+
+  .mission-english-banner {
+    background-size: contain;
+    margin-bottom: 0;
+  }
+}

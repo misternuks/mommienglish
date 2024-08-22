@@ -1,8 +1,16 @@
 import styles from './banner.module.css'
+import Image from 'next/image';
 
 export default function Banner() {
   return (
     <section className = {styles.banner} >
+        <Image
+          src = '/images/me_logo.png'
+          alt = 'MommiEnglish logo'
+          width = {150}
+          height = {150}
+          className = {styles['banner-logo']}
+        />
       <div className = {styles['banner-hero']}>
         <h2>
           ママが<span className='red-text'>笑</span>っていれば</h2>
@@ -13,11 +21,11 @@ export default function Banner() {
       </div>
       <div >
         <ul className= {styles['banner-buttons']} >
-          <li><a href="">HOME</a></li>
-          <li><a href="">サービス内容</a></li>
-          <li><a href="">料金</a></li>
-          <li><a href="">お問い合わせ</a></li>
-          <li><a href="">受講生専用PAGE</a></li>
+          <li><a href='#mission'>Mission</a></li>
+          <li><a href='#service'>サービス内容</a></li>
+          <li><a href='#fee'>料金</a></li>
+          <li><a href='#contact'>お問い合わせ</a></li>
+          <li><a href='#student-page'>受講生専用PAGE</a></li>
         </ul>
       </div>
     </section>

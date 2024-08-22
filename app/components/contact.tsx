@@ -7,7 +7,7 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
   return(
-    <section className = {styles.contact} >
+    <section id='contact' className = {styles.contact} >
       <div className = {styles['contact-content']}>
         <div>
           <h2>お<span className = 'red-text'>問</span>い合わせ</h2>

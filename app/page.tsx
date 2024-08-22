@@ -4,6 +4,7 @@ import Mission from './components/mission';
 import Service from './components/service';
 import Fee from './components/fee';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Service />
       <Fee />
       <Contact />
+      <Footer />
     </main>
   );
 }

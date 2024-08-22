@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Mission() {
   return (
-    <section className = {styles.mission} >
+    <section id='mission' className = {styles.mission} >
       <div>
         <h2>Our <span className = 'red-text'>M</span>ission</h2>
       </div>
@@ -26,7 +26,7 @@ export default function Mission() {
         <div className = {styles['mission-column']} >
           <Image
             src='/images/mission02.png'
-            alt='hand holding a paper with yes I can'
+            alt='mother helping a child write'
             width={320}
             height={320}
             className={styles['mission-image']}
@@ -42,7 +42,7 @@ export default function Mission() {
         <div className = {styles['mission-column']} >
           <Image
             src='/images/mission03.png'
-            alt='hand holding a paper with yes I can'
+            alt='mother talking to boy and girl on the couch'
             width={320}
             height={320}
             className={styles['mission-image']}

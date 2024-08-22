@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Fee() {
   return(
-    <section className = {styles.fee} >
+    <section id='fee' className = {styles.fee} >
       <div>
         <h2>料金のご<span className = 'red-text'>案</span>内</h2>
       </div>
