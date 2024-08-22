@@ -1,0 +1,26 @@
+.contact {
+  background-color: #FFD6DD;
+  height: 2000px;
+  padding: 64px 0px;
+  width: 100%;
+
+}
+
+.contact-content {
+  background-color: #FFECEC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 128px 64px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contact-sns {
+  display: flex;
+  gap: 32px;
+  font-size: 38px;
+}

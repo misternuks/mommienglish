@@ -15,9 +15,9 @@ export default function Fee() {
           height={450}
         />
         <div className = {styles['fee-content-list']}>
-          <button className='red-box'>
+          <div className='red-box'>
             ママと子どもの英語共育プロジェクト
-          </button>
+          </div>
           <div className = {styles['fee-list-item']} >
             <div className = {styles['fee-list-number']} >1</div>
             <div className = 'red-text'>週に１回のグループインプットセッション</div>

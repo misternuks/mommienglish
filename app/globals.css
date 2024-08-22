@@ -15,6 +15,7 @@
 h1, h2{
   font-weight: 700;
   border-bottom: dashed #5F5F5F;
+  padding-bottom: 8px;
 }
 
 h1 {

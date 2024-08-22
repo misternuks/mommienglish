@@ -1,5 +1,10 @@
 import './globals.css';
 import { Zen_Maru_Gothic } from 'next/font/google';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import Head from 'next/head';
+
+config.autoAddCss = false;
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: ['400', '700'],
@@ -19,6 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={zenMaruGothic.className}>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body>
         <header>
           {/* <nav>
@@ -31,9 +40,6 @@ export default function RootLayout({
           </nav> */}
         </header>
         <main>{children}</main>
-        <footer>
-          <p>&copy; 2024 MommiEnglish</p>
-        </footer>
       </body>
     </html>
   );
