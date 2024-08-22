@@ -9,10 +9,12 @@
 }
 
 .footer-buttons {
-  margin-top: 80px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
+  justify-content: space-evenly;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
 }

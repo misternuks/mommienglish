@@ -4,22 +4,28 @@ import Image from 'next/image';
 export default function Banner() {
   return (
     <section className = {styles.banner} >
-        <Image
-          src = '/images/me_logo.png'
-          alt = 'MommiEnglish logo'
-          width = {150}
-          height = {150}
-          className = {styles['banner-logo']}
-        />
-      <div className = {styles['banner-hero']}>
-        <h2>
-          ママが<span className='red-text'>笑</span>っていれば</h2>
-          <h2>それだけで<span className='red-text'>嬉</span>しい。</h2>
-      <button style={{ marginTop: 64 }} className='red-button'>
-        お問い合わせはこちら
-      </button>
+      <div className = {styles['banner-content']}>
+        <div>
+
+        </div>
+        <div className = {styles['banner-hero']}>
+          <Image
+            src='/images/me_logo.png'
+            alt='Red MommiEnglish Logo'
+            width={150}
+            height={150}
+            className={styles['']}
+          />
+          <h2>
+            ママが<span className = 'red-text'>笑</span>っていれば<br />
+            それだけで<span className = 'red-text'>嬉</span>しい。
+          </h2>
+          <button className = 'red-button'>
+            お問い合わせはこちら
+          </button>
+        </div>
       </div>
-      <div >
+      <div>
         <ul className= {styles['banner-buttons']} >
           <li><a href='#mission'>Mission</a></li>
           <li><a href='#service'>サービス内容</a></li>
