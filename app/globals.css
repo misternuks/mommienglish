@@ -49,7 +49,7 @@ h5 {
 }
 
 .navbar li a:hover {
-  color: #FFD6DD;
+  color: #FF5757;
 }
 
 .red-text {
@@ -57,15 +57,26 @@ h5 {
   color: #FF5757;
 }
 
-.red-button {
-  min-width: max-content;
-  background-color: #FF5757;
-  color: white;
+.red-button, .red-border-button {
   border-radius: 32px;
   padding: 16px;
   font-size: 15px;
   font-weight: 800;
+}
+
+.red-button {
+  min-width: max-content;
+  background-color: #FF5757;
+  color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.red-border-button {
+  min-width: 128px;
+  width: max-content;
+  background-color: tra;
+  border: 1px solid #FF5757;
+  color: #FF5757;
 }
 
 .red-box {
@@ -84,6 +95,46 @@ li {
   padding: 16px 8px;
 }
 
+.card {
+  min-width: 300px;
+  max-width: auto;
+  min-height: 300px;
+  max-height: auto;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 16px 64px;
+  margin: 16px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFECEC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.form-field {
+  border: 1px solid #FF5757;
+  border-radius: 8px;
+  padding: 16px 32px;
+  background-color: transparent;
+}
 
 @media (max-width: 600px) {
   h1 {
