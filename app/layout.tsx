@@ -3,6 +3,8 @@ import { Zen_Maru_Gothic } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Head from 'next/head';
+import SessionProviderWrapper from './session-provider-wrapper'; // Import a separate client component
+import Logout from './logout';
 
 config.autoAddCss = false;
 
@@ -29,6 +31,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
+       < SessionProviderWrapper>
         <header>
           {<nav>
             <ul className = "navbar">
@@ -36,11 +39,16 @@ export default function RootLayout({
               <li><a href='/#service'>サービス内容</a></li>
               <li><a href='/#fee'>料金</a></li>
               <li><a href='/#contact'>お問い合わせ</a></li>
-              <li><a href='/auth/signin'>受講生専用PAGE</a></li>
+              <li><a href='/members'>受講生専用PAGE</a></li>
+              <li><Logout /></li>
             </ul>
           </nav>}
         </header>
         <main>{children}</main>
+        <footer className = "footer">
+          <p>&copy; 2024 MommiEnglish</p>
+        </footer>
+      </SessionProviderWrapper>
       </body>
     </html>
   );
