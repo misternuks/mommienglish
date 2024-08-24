@@ -30,14 +30,15 @@ export default function RootLayout({
       </Head>
       <body>
         <header>
-          {/* <nav>
+          {<nav>
             <ul className = "navbar">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href='/'>Home</a></li>
+              <li><a href='/#service'>サービス内容</a></li>
+              <li><a href='/#fee'>料金</a></li>
+              <li><a href='/#contact'>お問い合わせ</a></li>
+              <li><a href='/auth/signin'>受講生専用PAGE</a></li>
             </ul>
-          </nav> */}
+          </nav>}
         </header>
         <main>{children}</main>
       </body>
