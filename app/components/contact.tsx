@@ -29,8 +29,12 @@ export default function Contact() {
             お問い合わせはこちら
           </a>
         <div className = {styles['contact-sns']}>
-          <FontAwesomeIcon icon={faSquareInstagram} />
-          <FontAwesomeIcon icon={faXTwitter} />
+          <a href="https://www.instagram.com/mommienglish_s2/"
+            target="_blank"><FontAwesomeIcon icon={faSquareInstagram} />
+          </a>
+          <a href="https://x.com/m_webdesign_85"
+            target="_blank"><FontAwesomeIcon icon={faXTwitter} />
+          </a>
         </div>
       </div>
     </section>
