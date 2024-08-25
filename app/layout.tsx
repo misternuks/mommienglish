@@ -5,6 +5,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Head from 'next/head';
 import SessionProviderWrapper from './session-provider-wrapper'; // Import a separate client component
 import Logout from './logout';
+import { FlashMessageProvider } from './context/FlashMessageContext';
+import FlashMessage from './components/FlashMessage';
 
 config.autoAddCss = false;
 
@@ -32,22 +34,25 @@ export default function RootLayout({
       </Head>
       <body>
        < SessionProviderWrapper>
-        <header>
-          {<nav>
-            <ul className = "navbar">
-              <li><a href='/'>Home</a></li>
-              <li><a href='/#service'>サービス内容</a></li>
-              <li><a href='/#fee'>料金</a></li>
-              <li><a href='/#contact'>お問い合わせ</a></li>
-              <li><a href='/members'>受講生専用PAGE</a></li>
-              <li><Logout /></li>
-            </ul>
-          </nav>}
-        </header>
-        <main>{children}</main>
-        <footer className = "footer">
-          <p>&copy; 2024 MommiEnglish</p>
-        </footer>
+        <FlashMessageProvider>
+          <FlashMessage />
+          <header>
+            {<nav>
+              <ul className = "navbar">
+                <li><a href='/'>Home</a></li>
+                <li><a href='/#service'>サービス内容</a></li>
+                <li><a href='/#fee'>料金</a></li>
+                <li><a href='/#contact'>お問い合わせ</a></li>
+                <li><a href='/members'>受講生専用PAGE</a></li>
+                <li><Logout /></li>
+              </ul>
+            </nav>}
+          </header>
+          <main>{children}</main>
+          <footer className = "footer">
+            <p>&copy; 2024 MommiEnglish</p>
+          </footer>
+        </FlashMessageProvider>
       </SessionProviderWrapper>
       </body>
     </html>

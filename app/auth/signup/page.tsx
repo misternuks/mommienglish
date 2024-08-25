@@ -2,13 +2,15 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt';
+import { useFlashMessage } from '@/app/context/FlashMessageContext';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const router = useRouter();
+  const { setFlashMessage } = useFlashMessage();
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,11 +25,13 @@ export default function SignUp() {
     });
 
     if (response.ok) {
-      // Redirect to the sign-in page after successful registration
+      // Show success message and redirect to the sign-in page after successful registration
+      setFlashMessage({ type: 'success', message: 'User created successfully!' });
       router.push('/auth/signin');
     } else {
-      // Show error message (make a decent one later)
-      console.error('Sign-up failed');
+      // Show error message)
+      const { error } = await response.json();
+      setFlashMessage({ type: 'error', message: error || 'Sign-up failed.' });
     }
   };
 
@@ -37,6 +41,7 @@ export default function SignUp() {
         <h2>Sign Up</h2>
         <form className="card-form" onSubmit={handleSignUp}>
           <input
+            className="form-field"
             type="text"
             placeholder="Name"
             value={name}
@@ -44,6 +49,7 @@ export default function SignUp() {
             required
           />
           <input
+            className="form-field"
             type="email"
             placeholder="Email"
             value={email}
@@ -51,6 +57,7 @@ export default function SignUp() {
             required
           />
           <input
+            className="form-field"
             type="password"
             placeholder="Password"
             value={password}
