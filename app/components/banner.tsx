@@ -2,6 +2,9 @@ import styles from './banner.module.css'
 import Image from 'next/image';
 
 export default function Banner() {
+
+  const questionnaire = process.env.NEXT_PUBLIC_QUESTIONNAIRE;
+
   return (
     <section className = {styles.banner} >
       <div className = {styles['banner-content']}>
@@ -20,9 +23,13 @@ export default function Banner() {
           <h2>ママが<span className = 'red-text'>笑</span>っていれば</h2><br />
           <h2>それだけで<span className = 'red-text'>嬉</span>しい。</h2>
           </div>
-          <button className = 'red-button'>
+          <a
+            className = 'red-button'
+            href={questionnaire}
+            target='_blank'
+          >
             お問い合わせはこちら
-          </button>
+          </a>
         </div>
       </div>
     </section>

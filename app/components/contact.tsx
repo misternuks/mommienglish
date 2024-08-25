@@ -6,6 +6,9 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Contact() {
+
+  const questionnaire = process.env.NEXT_PUBLIC_QUESTIONNAIRE;
+
   return(
     <section id='contact' className = {styles.contact} >
       <div className = {styles['contact-content']}>
@@ -18,9 +21,13 @@ export default function Contact() {
           X(旧twitter)またはInstagarmのDMにてお受け付けしております。
           </p>
         </div>
-        <button className = 'red-button'>
-          お問い合わせはこちら
-        </button>
+        <a
+            className = 'red-button'
+            href={questionnaire}
+            target='_blank'
+          >
+            お問い合わせはこちら
+          </a>
         <div className = {styles['contact-sns']}>
           <FontAwesomeIcon icon={faSquareInstagram} />
           <FontAwesomeIcon icon={faXTwitter} />

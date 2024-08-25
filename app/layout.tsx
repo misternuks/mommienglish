@@ -4,7 +4,6 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Head from 'next/head';
 import SessionProviderWrapper from './session-provider-wrapper'; // Import a separate client component
-import Logout from './logout';
 import { FlashMessageProvider } from './context/FlashMessageContext'; // Import the FlashMessageProvider
 import FlashMessage from './components/FlashMessage'; // Import the FlashMessage component
 
@@ -44,7 +43,6 @@ export default function RootLayout({
                   <li><a href='/#fee'>料金</a></li>
                   <li><a href='/#contact'>お問い合わせ</a></li>
                   <li><a href='/members'>受講生専用PAGE</a></li>
-                  <li><Logout /></li>
                 </ul>
               </nav>}
             </header>

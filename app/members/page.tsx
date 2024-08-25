@@ -3,6 +3,8 @@
 import { useSession, signIn } from 'next-auth/react';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Logout from '../logout';
+
 
 export default function Members() {
   const { data: session, status } = useSession();
