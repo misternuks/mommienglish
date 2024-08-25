@@ -47,15 +47,12 @@ export default function SignIn() {
           <input name="password" type="password" placeholder="Password" className="form-field" />
           <button type="submit" className="red-border-button" >Sign in</button>
         </form>
-<<<<<<< HEAD
         <button
           onClick={() => router.push('/auth/signup')}
           className="red-button"
         >
           Sign up
         </button>
-=======
->>>>>>> cd59693459cbce71b96e4610232a46cfca01e456
       </div>
     </div>
   );
