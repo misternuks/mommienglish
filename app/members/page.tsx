@@ -21,7 +21,23 @@ export default function Members() {
 
   return (
     <div className = "member-banner">
-      <h2>Coming soon!</h2>
+      <div className="member-banner-left">
+        <div>
+          <h2 className="member-banner-h3">おうち英語習慣化プログラム</h2>
+        </div>
+        <div className="member-banner-center">
+          <h2 className="member-banner-h3">ママと子どもの</h2>
+          <h1>英語共育</h1>
+          <h2 className="member-banner-h3">プロジェクト</h2>
+        </div>
+        <div>
+          <h2 className="member-banner-h3">Wednesday class: 10:00~ </h2>
+          <h2 className="member-banner-h3">Friday class: 21:30~ </h2>
+        </div>
+      </div>
+      <div className="member-banner-right">
+
+      </div>
     </div>
   );
 }
