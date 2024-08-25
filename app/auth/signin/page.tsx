@@ -47,6 +47,12 @@ export default function SignIn() {
           <input name="password" type="password" placeholder="Password" className="form-field" />
           <button type="submit" className="red-border-button" >Sign in</button>
         </form>
+        <button
+          onClick={() => router.push('/auth/signup')}
+          className="red-button"
+        >
+          Sign up
+        </button>
       </div>
     </div>
   );
