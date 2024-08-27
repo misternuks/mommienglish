@@ -137,6 +137,20 @@ h5 {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+.red-button:hover {
+  background-color: #FFD6DD;
+  color: #00CCCC;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+}
+
+.red-button:active {
+  background-color: #FFD6DD;
+  color: #00CCCC;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+}
+
 .red-border-button {
   background-color: tra;
   border: 1px solid #FF5757;
