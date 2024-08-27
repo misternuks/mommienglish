@@ -46,10 +46,17 @@ nav ul li a {
   border: none;
   font-size: 32px;
   cursor: pointer;
-  margin-right: 8px;
+  margin-right: 16px;
 }
 
 @media (max-width: 700px) {
+  /* Move the navbar to the top and sticky on small screens */
+  nav {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+  }
+
   #navbar {
     display: flex;
     justify-content: end;
@@ -72,7 +79,7 @@ nav ul li a {
     position: absolute;
     top: 0;
     width: auto;
-    margin-top: 32px;
+    margin-top: 40px;
     background-color: white;
     padding: 16px;
     box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.1);

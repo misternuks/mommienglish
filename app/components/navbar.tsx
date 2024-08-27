@@ -25,7 +25,10 @@ const Navbar = () => {
       }
     }
 
-    window.addEventListener('scroll', checkStickyNavbar);
+    // Add sticky navbar for larger screens only
+    if (window.innerWidth > 700) {
+      window.addEventListener('scroll', checkStickyNavbar);
+    }
 
     // Clean up the event listener on component unmount
     return () => {
