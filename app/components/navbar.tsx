@@ -1,8 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const navbar = document.getElementById('navbar');
 
@@ -31,17 +33,20 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav id="navbar">
-      <ul>
+      <button className="hamburger-menu" onClick={toggleMobileMenu}>
+        ☰
+      </button>
+      <ul className={isMobileMenuOpen ? 'mobile-menu' : 'desktop-menu'}>
         <li><a href='/'>Home</a></li>
-        <li>|</li>
         <li><a href='/#service'>サービス内容</a></li>
-        <li>|</li>
         <li><a href='/#fee'>料金</a></li>
-        <li>|</li>
         <li><a href='/#contact'>お問い合わせ</a></li>
-        <li>|</li>
         <li><a href='/members'>受講生専用Page</a></li>
       </ul>
     </nav>

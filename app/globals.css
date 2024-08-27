@@ -40,6 +40,49 @@ nav ul li a {
   color: #5F5F5F;
 }
 
+.hamburger-menu {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+@media (max-width: 700px) {
+  #navbar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .hamburger-menu {
+    display: block; /* Show on small screens */
+  }
+
+  .desktop-menu {
+    display: none; /* Hide on small screens */
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin-top: 32px;
+    background-color: white;
+    padding: 16px;
+    box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul li {
+    margin: 5px 0;  /* Adjust on small screens */
+  }
+}
+
 h1, h2{
   font-weight: 700;
   border-bottom: dashed #5F5F5F;
