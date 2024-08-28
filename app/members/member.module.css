@@ -1,0 +1,74 @@
+
+.member-banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  white-space: nowrap;
+}
+
+.member-banner-left {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #FF5757;
+  padding: 32px;
+}
+
+.member-banner-center {
+  width: 400px;
+  background-color: #FAEB98;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow:
+    -4px -4px 0 white,
+    4px -4px 0 white,
+    4px 4px 0 white,
+    4px 4px 0 white;
+}
+
+.member-banner-h3{
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  border: 0;
+  text-align: right;
+}
+
+.member-banner-center .member-banner-h3 {
+  color: #FF5757;
+  margin: 0;
+  padding: 0;
+}
+
+.member-banner h1 {
+  border: 0;
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.member-banner-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/images/happy_lady.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 128px;
+  color: white;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.banner-logo {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}

@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.zen-maru-gothic-regular {
-  font-family: "Zen Maru Gothic", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-* {
+html {
   color: #5F5F5F;
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -126,7 +123,7 @@ h5 {
   border-radius: 32px;
   padding: 16px;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   min-width: 128px;
   width: max-content;
 }
@@ -163,7 +160,7 @@ h5 {
   border-radius: 16px;
   padding: 8px 24px;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -212,42 +209,6 @@ h5 {
   h1 {
     font-size: 2rem;
   }
-}
-
-.member-banner {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-}
-
-.member-banner-left {
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #FF5757;
-  padding: 64px;
-}
-
-.member-banner-center {
-  background-color: #FAEB98;
-  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;;
-  padding: 64px;
-}
-
-.member-banner-h3{
-  color: white;
-  font-weight: 700;
-  size: 30px;
-  border: 0;
-}
-
-.member-banner-right {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .flash-message {

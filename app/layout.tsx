@@ -1,12 +1,11 @@
 import './globals.css';
-import { Zen_Maru_Gothic } from 'next/font/google';
+import { Zen_Maru_Gothic} from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Head from 'next/head';
 import SessionProviderWrapper from './session-provider-wrapper'; // Import a separate client component
 import { FlashMessageProvider } from './context/FlashMessageContext'; // Import the FlashMessageProvider
 import FlashMessage from './components/FlashMessage'; // Import the FlashMessage component
-import Navbar from './components/navbar';
 
 config.autoAddCss = false;
 
@@ -31,13 +30,12 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body>
+      <body className="zen-maru-gothic-regular">
         < SessionProviderWrapper>
           <FlashMessageProvider>
             <FlashMessage />
             <header>
             </header>
-            <Navbar />
             <main>{children}</main>
             <footer className = "footer">
               <p>&copy; 2024 MommiEnglish</p>
