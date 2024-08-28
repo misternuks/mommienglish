@@ -32,11 +32,13 @@ export default function Members() {
         <div>
           <h2 className={styles["member-banner-h3"]}>おうち英語習慣化プログラム</h2>
         </div>
+        <ul />
         <div className={styles["member-banner-center"]}>
           <h2 className={styles["member-banner-h3"]}>ママと子どもの</h2>
-          <h1>英語共育</h1>
+          <h1>英語<span className={styles["member-banner-center-red-text"]}>共</span>育</h1>
           <h2 className={styles["member-banner-h3"]}>プロジェクト</h2>
         </div>
+        <ul />
         <div>
           <h2 className={styles["member-banner-h3"]}>Wednesday class: 10:00~ </h2>
           <h2 className={styles["member-banner-h3"]}>Friday class: 21:30~ </h2>

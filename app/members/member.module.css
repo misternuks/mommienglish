@@ -3,7 +3,6 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  white-space: nowrap;
 }
 
 .member-banner-left {
@@ -13,17 +12,26 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: #FF5757;
-  padding: 32px;
+  padding: 8px;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+.member-banner-left ul {
+  border: solid white 1px;
+  width: 80%;
+  margin: 16px;
 }
 
 .member-banner-center {
-  width: 400px;
   background-color: #FAEB98;
   border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;;
   padding: 64px;
+  margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   text-shadow:
     -4px -4px 0 white,
     4px -4px 0 white,
@@ -40,9 +48,17 @@
 }
 
 .member-banner-center .member-banner-h3 {
-  color: #FF5757;
+  color: #5F5F5F;
+  font-weight: 700;
   margin: 0;
   padding: 0;
+}
+
+.member-banner-center-red-text {
+  color: #FF5757;
+  transform: rotate(-12deg);
+  display: inline-block;
+  font-size: 100px;
 }
 
 .member-banner h1 {
@@ -65,10 +81,36 @@
   padding: 128px;
   color: white;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  gap: 32px;
 }
 
 .banner-logo {
   display: flex;
   align-items: end;
   justify-content: end;
+}
+
+@media (max-width: 1000px) and (min-width: 850px) {
+  .member-banner-right {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 849px) {
+  .member-banner {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .member-banner-left {
+    min-width: 400px;
+  }
+
+  .member-banner-right {
+    padding: 32px;
+  }
+
+  .member-banner h1 {
+    font-size: 64px;
+  }
 }
