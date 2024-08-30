@@ -45,13 +45,10 @@
 .fee-money-text {
   align-self: self-end;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 900;
+  -webkit-text-stroke: 8px white;
+  paint-order: stroke fill;
   color: #FF5757;
-  text-shadow:
-    -3px -3px 0 white,
-    3px -3px 0 white,
-    3px 3px 0 white,
-    3px 3px 0 white;
   border: 0;
 
 }

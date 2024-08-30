@@ -10,7 +10,7 @@ import FlashMessage from './components/FlashMessage'; // Import the FlashMessage
 config.autoAddCss = false;
 
 const zenMaruGothic = Zen_Maru_Gothic({
-  weight: ['400', '700'],
+  weight: ['400', '700', '900'],
   subsets: ['latin']
 });
 

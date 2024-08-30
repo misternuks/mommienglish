@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useFlashMessage } from '../context/FlashMessageContext';
+import styles from './FlashMessage.module.css'
 
 const FlashMessage = () => {
   const { flashMessage, clearFlashMessage} = useFlashMessage();
@@ -19,7 +20,7 @@ const FlashMessage = () => {
   if (!flashMessage) return null;
 
   return (
-    <div className={`flash-message ${flashMessage.type}`}>
+    <div className={`${styles['flash-message']} ${styles[flashMessage.type]}`}>
       {flashMessage.message}
     </div>
   );
