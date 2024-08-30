@@ -3,7 +3,8 @@ import './globals.css';
 import { Zen_Maru_Gothic} from 'next/font/google';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 
 import Head from 'next/head';
 
@@ -11,6 +12,7 @@ import SessionProviderWrapper from './session-provider-wrapper'; // Import a sep
 
 import { FlashMessageProvider } from './context/FlashMessageContext'; // Import the FlashMessageProvider
 import FlashMessage from './components/FlashMessage'; // Import the FlashMessage component
+import HomeButton from './components/HomeButton';
 
 config.autoAddCss = false;
 
@@ -29,6 +31,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang="en" className={zenMaruGothic.className}>
       <Head>
@@ -40,8 +44,7 @@ export default function RootLayout({
         < SessionProviderWrapper>
           <FlashMessageProvider>
             <FlashMessage />
-            <header>
-            </header>
+            <HomeButton />
             <main>{children}</main>
             <footer className = "footer">
               <p>&copy; 2024 MommiEnglish</p>

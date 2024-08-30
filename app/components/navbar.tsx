@@ -1,8 +1,5 @@
 'use client';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
-
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
@@ -49,11 +46,6 @@ const Navbar = () => {
         ☰
       </button>
       <ul className={isMobileMenuOpen ? 'mobile-menu' : 'desktop-menu'}>
-        <li><a href="#"
-          className="home-button">
-            <FontAwesomeIcon icon={faHouse} />
-          </a>
-          </li>
         <li><a href='/#service'>サービス内容</a></li>
         <li><a href='/#fee'>料金</a></li>
         <li><a href='/#contact'>お問い合わせ</a></li>

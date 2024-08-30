@@ -45,7 +45,7 @@ export default function Members() {
         </div>
       </div>
       <div className={styles["member-banner-right"]}>
-        <div>
+        <div className={styles["member-banner-right-text"]}>
           <h1 className={darumadropOne.className}>
             <span className="red-text">M</span>ake <span className="red-text">E</span>nglish<br />
             a <span className="red-text">H</span>abit at <span className="red-text">H</span>ome
@@ -55,8 +55,8 @@ export default function Members() {
           <Image
             src='/images/logo_group_white.png'
             alt='white logo group'
-            width={615}
-            height={115}
+            width={400}
+            height={80}
           />
         </div>
       </div>
