@@ -5,10 +5,11 @@ import Service from './components/service';
 import Fee from './components/fee';
 import Contact from './components/contact';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-page">
       <Banner />
       <Navbar />
       <Concept />
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Service />
       <Fee />
       <Contact />
+      <Footer />
     </main>
   );
 }

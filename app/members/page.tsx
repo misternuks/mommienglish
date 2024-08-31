@@ -7,6 +7,7 @@ import Image from 'next/image';
 // import HomeButton from '../components/HomeButton';
 import MembersNavbar from './MembersNavbar';
 import MembersCalendar from './MembersCalendar';
+import Footer from '../components/footer';
 
 const darumadropOne = Darumadrop_One({
   weight: ['400'],
@@ -27,7 +28,7 @@ export default function Members() {
   }
 
   return (
-    <main>
+    <main id="members-page">
       <div className={styles["member-banner"]}>
         {/* <div className={styles["members-home-button"]}>
           <HomeButton/>
@@ -38,9 +39,9 @@ export default function Members() {
           </div>
           <ul />
           <div className={styles["member-banner-center"]}>
-            <h2 className={styles["member-banner-h3"]}>ママと子どもの</h2>
+            <h3>ママと子どもの</h3>
             <h1>英語<span className={styles["member-banner-center-red-text"]}>共</span>育</h1>
-            <h2 className={styles["member-banner-h3"]}>プロジェクト</h2>
+            <h2>プロジェクト</h2>
           </div>
           <ul />
           <div>
@@ -67,6 +68,7 @@ export default function Members() {
       </div>
       <MembersNavbar />
       <MembersCalendar />
+      <Footer />
     </main>
   );
 }

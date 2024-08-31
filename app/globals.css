@@ -9,6 +9,14 @@ html {
   height: 100%;
 }
 
+#main-page {
+  background-color: #FFD6DD;
+}
+
+#members-page {
+  background-color: #fefae2
+}
+
 nav {
   display: flex;
   align-items: baseline;
@@ -97,19 +105,19 @@ nav {
 
 }
 
-h1, h2{
-  font-weight: 700;
+#main-page h1, h2 {
   border-bottom: dashed #5F5F5F;
   padding-bottom: 8px;
-  line-height: 2;
+  line-height: 1;
+  font-weight: 700;
 }
 
-h1 {
-  font-size: 3rem;
+#main-page h1 {
+  font-size: 40px;
 }
 
-h2 {
-  font-size: 2rem;
+#main-page h2 {
+  font-size: 32px;
 }
 
 h4 {
@@ -121,12 +129,6 @@ h5 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
-}
-
-.footer {
-  background-color: #FFECEC;
-  text-align: center;
-  padding: 16px;
 }
 
 .red-text {

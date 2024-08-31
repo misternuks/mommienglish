@@ -1,16 +1,17 @@
 import styles from './footer.module.css'
+import Image from 'next/image';
 
 export default function Footer() {
   return(
-    <section className = {styles.footer}>
-       <div >
-        <ul className= {styles['footer-buttons']} >
-        <li><a href='#mission'>Mission</a></li>
-          <li><a href='#service'>サービス内容</a></li>
-          <li><a href='#fee'>料金</a></li>
-          <li><a href='#contact'>お問い合わせ</a></li>
-          <li><a href='#student-page'>受講生専用PAGE</a></li>
-        </ul>
+    <section>
+      <div className={styles.footer}>
+        <Image
+          src='/me_colorful_logo.png'
+          alt='MommiEnglish logo in red and green'
+          width={256}
+          height={40}
+        />
+        <p>&copy; 2024 MommiEnglish</p>
       </div>
     </section>
   );
