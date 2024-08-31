@@ -1,27 +1,10 @@
 .home-button {
   font-size: 32px;
   margin: 8px;
-  /* filter: drop-shadow(1px 1px white)
-          drop-shadow(-1px -1px white)
-          drop-shadow(1px -1px white)
-          drop-shadow(-1px 1px white) */
-
-}
-
-.home-button-color {
   color: #FF5757;
   transition: 0.2s
 }
 
-.home-button-color:hover {
+.home-button:hover {
   color: #00CCCC;
-}
-
-.default-button-color {
-  color: white;
-  transition: 0.2s
-}
-
-.default-button-color:hover {
-  color: #FAEB98;
 }
