@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 
 import HomeButton from './HomeButton';
 
-const Navbar = () => {
+const MemberNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById('member-navbar');
 
     function checkStickyNavbar() {
       if (!navbar) return;
@@ -43,19 +43,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="navbar">
+    <nav id="member-navbar">
       <HomeButton />
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
         ☰
       </button>
       <ul className={isMobileMenuOpen ? 'mobile-menu' : 'desktop-menu'}>
-        <li><a href='/#service'>サービス内容</a></li>
-        <li><a href='/#fee'>料金</a></li>
-        <li><a href='/#contact'>お問い合わせ</a></li>
-        <li><a href='/members'>受講生専用Page</a></li>
+        <li><a href='#calendar'>Calendar</a></li>
+        <li><a href='#lessons'>Lessons</a></li>
+        <li><a href='#workshop'>Workshop</a></li>
+        <li><a href='#contact'>Contact</a></li>
       </ul>
     </nav>
   );
 };
 
-export default Navbar;
+export default MemberNavbar;

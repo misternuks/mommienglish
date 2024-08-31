@@ -3,6 +3,13 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  position: relative
+}
+
+.members-home-button {
+  position: fixed;
+  top: 0;
+  margin: 16px;
 }
 
 .member-banner-left {

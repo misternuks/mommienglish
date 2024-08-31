@@ -1,10 +1,6 @@
 .home-button {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   font-size: 32px;
-  margin: 32px;
+  margin: 8px;
   /* filter: drop-shadow(1px 1px white)
           drop-shadow(-1px -1px white)
           drop-shadow(1px -1px white)
@@ -18,11 +14,11 @@
 }
 
 .home-button-color:hover {
-  color: #FFD6DD;
+  color: #00CCCC;
 }
 
 .default-button-color {
-  color: #00CCCC;
+  color: white;
   transition: 0.2s
 }
 

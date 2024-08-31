@@ -4,7 +4,7 @@ import { useSession, signIn } from 'next-auth/react';
 import { useEffect } from 'react';
 import styles from "./member.module.css"
 import Image from 'next/image';
-// import Logout from '../logout';
+import HomeButton from '../components/HomeButton';
 
 const darumadropOne = Darumadrop_One({
   weight: ['400'],
@@ -28,6 +28,9 @@ export default function Members() {
 
   return (
     <div className={styles["member-banner"]}>
+      <div className={styles["members-home-button"]}>
+        <HomeButton/>
+      </div>
       <div className={styles["member-banner-left"]}>
         <div>
           <h2 className={styles["member-banner-h3"]}>おうち英語習慣化プログラム</h2>

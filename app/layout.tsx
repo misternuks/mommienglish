@@ -12,7 +12,6 @@ import SessionProviderWrapper from './session-provider-wrapper'; // Import a sep
 
 import { FlashMessageProvider } from './context/FlashMessageContext'; // Import the FlashMessageProvider
 import FlashMessage from './components/FlashMessage'; // Import the FlashMessage component
-import HomeButton from './components/HomeButton';
 
 config.autoAddCss = false;
 
@@ -44,7 +43,6 @@ export default function RootLayout({
         < SessionProviderWrapper>
           <FlashMessageProvider>
             <FlashMessage />
-            <HomeButton />
             <main>{children}</main>
             <footer className = "footer">
               <p>&copy; 2024 MommiEnglish</p>
