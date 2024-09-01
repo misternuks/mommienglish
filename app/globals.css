@@ -120,9 +120,11 @@ nav {
   font-size: 32px;
 }
 
-h4 {
+.members-header {
    color: #00CCCC;
    font-size: 32px;
+   font-weight: 700;
+   border: 0;
 }
 
 h5 {

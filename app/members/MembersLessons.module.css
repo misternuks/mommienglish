@@ -1,0 +1,47 @@
+.members-lessons-container {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  width: 100%;
+  height: auto;
+  padding: 64px;
+}
+
+.members-new-lessons-container {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+}
+
+.members-new-lessons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+  }
+
+
+.members-new-lesson-thumbnail {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: justify;
+  opacity: 80%;
+  transition: 0.5s ease;
+}
+
+.members-new-lesson-thumbnail:hover {
+  cursor: pointer;
+  opacity: 100%;
+  transform: scale(1.02);
+}

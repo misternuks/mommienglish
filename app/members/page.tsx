@@ -4,9 +4,9 @@ import { useSession, signIn } from 'next-auth/react';
 import { useEffect } from 'react';
 import styles from "./MembersBanner.module.css"
 import Image from 'next/image';
-// import HomeButton from '../components/HomeButton';
 import MembersNavbar from './MembersNavbar';
 import MembersCalendar from './MembersCalendar';
+import MembersLessons from './MembersLessons';
 import Footer from '../components/footer';
 
 const darumadropOne = Darumadrop_One({
@@ -68,6 +68,7 @@ export default function Members() {
       </div>
       <MembersNavbar />
       <MembersCalendar />
+      <MembersLessons />
       <Footer />
     </main>
   );
