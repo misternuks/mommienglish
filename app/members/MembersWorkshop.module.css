@@ -1,14 +1,14 @@
-.members-lessons-container {
+.members-workshop-container {
   display: flex;
   align-items: start;
-  justify-content: end;
+  justify-content: start;
   width: 100%;
   height: auto;
   padding: 64px;
   margin-bottom: 64px;
 }
 
-.members-new-lessons-container {
+.members-new-workshop-container {
   width: 80%;
   max-width: 1000px;
   display: flex;
@@ -17,7 +17,7 @@
   justify-content: space-evenly;
 }
 
-.members-new-lessons {
+.members-new-workshop {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
   }
 
 
-.members-new-lesson-thumbnail {
+.members-new-workshop-thumbnail {
   width: 200px;
   height: auto;
   display: flex;
@@ -40,18 +40,18 @@
   transition: 0.5s ease;
 }
 
-.members-new-lesson-thumbnail:hover {
+.members-new-workshop-thumbnail:hover {
   cursor: pointer;
   opacity: 100%;
   transform: scale(1.02);
 }
 
 @media (max-width: 700px) {
-  .members-lessons-container {
+  .members-workshop-container {
     padding: 32px;
   }
 
-  .members-new-lessons-container {
+  .members-new-workshop-container {
     width: 100%;
   }
 }
