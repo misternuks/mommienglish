@@ -8,6 +8,7 @@ import MembersNavbar from './MembersNavbar';
 import MembersCalendar from './MembersCalendar';
 import MembersLessons from './MembersLessons';
 import MembersWorkshop from './MembersWorkshop';
+import MembersContact from './MembersContact';
 import Footer from '../components/footer';
 
 const darumadropOne = Darumadrop_One({
@@ -71,6 +72,7 @@ export default function Members() {
       <MembersCalendar />
       <MembersLessons />
       <MembersWorkshop />
+      <MembersContact />
       <Footer />
     </main>
   );

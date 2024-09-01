@@ -144,7 +144,8 @@ h5 {
   padding: 16px;
   font-size: 15px;
   font-weight: 700;
-  min-width: 128px;
+  text-align: center;
+  min-width: 256px;
   width: max-content;
 }
 
