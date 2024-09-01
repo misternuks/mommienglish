@@ -1,7 +1,7 @@
 .members-lessons-container {
   display: flex;
   align-items: start;
-  justify-content: end;
+  justify-content: center;
   width: 100%;
   height: auto;
   padding: 64px;
@@ -9,7 +9,7 @@
 }
 
 .members-new-lessons-container {
-  width: 80%;
+  width: 100%;
   max-width: 1000px;
   display: flex;
   flex-direction: column;

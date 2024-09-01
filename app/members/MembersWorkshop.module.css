@@ -1,7 +1,7 @@
 .members-workshop-container {
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   height: auto;
   padding: 64px;
@@ -9,7 +9,7 @@
 }
 
 .members-new-workshop-container {
-  width: 80%;
+  width: 100%;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
