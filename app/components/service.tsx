@@ -1,9 +1,40 @@
+'use client';
+
 import styles from './service.module.css'
 import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Service() {
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the component is in view
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id='service' className = {styles.service} >
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      id='service'
+      className = {styles.service}
+    >
       <div>
         <h2>サービス<span className = 'red-text'>内</span>容</h2>
       </div>
@@ -105,6 +136,6 @@ export default function Service() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

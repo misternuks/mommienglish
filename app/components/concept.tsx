@@ -1,8 +1,39 @@
+'use client';
+
 import styles from './concept.module.css'
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Concept() {
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the component is in view
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id='concept' className = {styles.concept} >
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      id='concept'
+      className = {styles.concept}
+    >
       <div className = {styles['concept-vertical-text-container']}>
         <div className = {styles['concept-vertical-text']}>ママのための</div>
         <div className = {styles['concept-vertical-text']}>英語習慣化プログラム</div>
@@ -24,6 +55,6 @@ export default function Concept() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

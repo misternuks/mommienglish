@@ -1,9 +1,40 @@
+'use client';
+
 import styles from './mission.module.css'
 import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Mission() {
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the component is in view
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id='mission' className = {styles.mission} >
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      id='mission'
+      className = {styles.mission}
+    >
       <div>
         <h2>Our <span className = 'red-text'>M</span>ission</h2>
       </div>
@@ -59,6 +90,6 @@ export default function Mission() {
       <div className = {styles['mission-english-banner']}>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
