@@ -64,7 +64,15 @@ export default function Service() {
           </p>
         </div>
       </div>
-      <div className = {styles['service-feature-container']} >
+      <div className = {styles['service-feature-container-flipped']} >
+        <div className = {styles['service-feature-column']} >
+          <Image
+              src='/images/service02.png'
+              alt='notebook computer displaying faces'
+              width={400}
+              height={400}
+          />
+        </div>
         <div className = {styles['service-feature-column']} >
           <p className = {styles['service-feature-number']} >
             feature 2
@@ -76,16 +84,13 @@ export default function Service() {
             交流会 or ワークショップ
           </p>
           <p>
-            <strong>英語教育の情報交換をしたり、ネイティブを呼んでのお話し会を実施いたします。また、異文化理解のワークショップを行ったり、子どもと楽しめるDIY玩具作りなど、お子さまが五感を使って英語体験をしていただくセッションも準備しております。</strong>
+            <strong>英語教育の情報交換をしたり、
+              ネイティブを呼んでのお話し会を実施いたします。
+              また、異文化理解のワークショップを行ったり、
+              子どもと楽しめるDIY玩具作りなど、
+              お子さまが五感を使って英語体験をしていただくセッションも準備しております。
+            </strong>
           </p>
-        </div>
-        <div className = {styles['service-feature-column']} >
-          <Image
-              src='/images/service02.png'
-              alt='notebook computer displaying faces'
-              width={400}
-              height={400}
-          />
         </div>
       </div>
       <div className = {styles['service-feature-container']} >
@@ -108,11 +113,22 @@ export default function Service() {
             おうち英語習慣化コーチング
           </p>
           <p>
-            <strong>まずは目的、ゴールの可視化をすることでモチベーション維持を目指します。ご家庭での英語使用頻度の報告やそれに沿ったアドバイス、お子様の年齢にあった声かけ指導、絵本や教材の紹介などもさせていただきます。</strong>
+            <strong>まずは目的、ゴールの可視化をすることでモチベーション維持を目指します。
+              ご家庭での英語使用頻度の報告やそれに沿ったアドバイス、
+              お子様の年齢にあった声かけ指導、絵本や教材の紹介などもさせていただきます。
+            </strong>
           </p>
         </div>
       </div>
-      <div className = {styles['service-feature-container']} >
+      <div className = {styles['service-feature-container-flipped']} >
+        <div className = {styles['service-feature-column']} >
+          <Image
+              src='/images/service04.png'
+              alt='notebook computer displaying faces'
+              width={400}
+              height={400}
+          />
+        </div>
         <div className = {styles['service-feature-column']} >
           <p className = {styles['service-feature-number']} >
             feature 4
@@ -124,16 +140,13 @@ export default function Service() {
             アウトプット強化セッション
           </p>
           <p>
-            <strong>発音・イントネーションの指導と練習、インプットセッションで学んだフレーズの確認などを行います。レベルに合わせて講師との英語での会話も可能です。マンツーマンなので間違うことを恐れず、恥ずかしがらずに英語でのアウトプットができます。</strong>
+            <strong>発音・イントネーションの指導と練習、
+              インプットセッションで学んだフレーズの確認などを行います。
+              レベルに合わせて講師との英語での会話も可能です。
+              マンツーマンなので間違うことを恐れず、
+              恥ずかしがらずに英語でのアウトプットができます。
+            </strong>
           </p>
-        </div>
-        <div className = {styles['service-feature-column']} >
-          <Image
-              src='/images/service04.png'
-              alt='notebook computer displaying faces'
-              width={400}
-              height={400}
-          />
         </div>
       </div>
     </motion.section>

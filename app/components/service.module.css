@@ -10,7 +10,11 @@
   width: 100%;
 }
 
-.service-feature-container {
+.service-feature-container-flipped {
+  flex-direction: row-reverse;
+}
+
+.service-feature-container, .service-feature-container-flipped {
   display: flex;
   justify-content: center;
   align-items: flex-start;
