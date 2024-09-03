@@ -5,7 +5,6 @@
   width: 100%;
   height: auto;
   padding: 64px;
-  margin-bottom: 64px;
 }
 
 .members-new-lessons-container {
@@ -44,6 +43,10 @@
   cursor: pointer;
   opacity: 100%;
   transform: scale(1.02);
+}
+
+.members-image {
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 700px) {

@@ -43,7 +43,10 @@ export default function MembersContact() {
             <p>質問やご要望がありましたら<wbr />お気軽にお問い合わせください</p>
           </div>
           <button className="red-button">
-            <a href="https://forms.gle/1Av7cpG1hpMKSNq27">お問い合わせはこちら
+            <a target="_blank"
+              href="https://forms.gle/1Av7cpG1hpMKSNq27"
+            >
+              お問い合わせはこちら
             </a>
           </button>
         </div>
@@ -55,7 +58,9 @@ export default function MembersContact() {
             <p>※別サイトに移行します。</p>
           </div>
           <button className="red-button">
-            <a href="https://app.spirinc.com/patterns/availability-sharing/9bCh-7cwPGilEnrwby9Vz/confirm">
+            <a target="_blank"
+              href="https://app.spirinc.com/patterns/availability-sharing/9bCh-7cwPGilEnrwby9Vz/confirm"
+            >
               予約する
             </a>
           </button>

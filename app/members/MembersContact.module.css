@@ -6,7 +6,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 128px;
+  gap: 64px;
+  padding: 64px;
   margin-bottom: 64px;
 }
 

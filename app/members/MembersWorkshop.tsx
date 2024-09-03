@@ -46,6 +46,7 @@ export default function MembersWorkshop() {
                 alt="mother talking to children"
                 width={200}
                 height={200}
+                className={styles['members-image']}
               />
               <p>
                 {thumbnailText}
@@ -57,6 +58,7 @@ export default function MembersWorkshop() {
                 alt="mother talking to children"
                 width={200}
                 height={200}
+                className={styles['members-image']}
               />
               <p>
                 {thumbnailText}
@@ -68,6 +70,7 @@ export default function MembersWorkshop() {
                 alt="mother talking to children"
                 width={200}
                 height={200}
+                className={styles['members-image']}
               />
               <p>
                 {thumbnailText}
