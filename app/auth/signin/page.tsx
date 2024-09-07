@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { useFlashMessage } from '@/app/context/FlashMessageContext';
 
+import HomeButton from '@/app/components/HomeButton';
+
 export default function SignIn() {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -39,24 +41,21 @@ export default function SignIn() {
   };
 
   return (
-    <div className="card-container">
-      <div className="card">
-        <Image
-          src='/images/logo_group.png'
-          alt='MommiEnglish logo and slogan group'
-          width={600}
-          height={150}
-        />
-        <form className="card-form" onSubmit={handleSignIn}>
-          <input name="passcode" type="password" placeholder="Passcode" className="form-field" />
-          <button type="submit" className="red-border-button" >Sign in</button>
-        </form>
-        {/* <button
-          onClick={() => router.push('/auth/signup')}
-          className="red-button"
-        >
-          Sign up
-        </button> */}
+    <div>
+      <div className="card-container">
+        <div className="card">
+          <Image
+            src='/images/logo_group.png'
+            alt='MommiEnglish logo and slogan group'
+            width={600}
+            height={150}
+          />
+          <form className="card-form" onSubmit={handleSignIn}>
+            <input name="passcode" type="password" placeholder="Passcode" className="form-field" />
+            <button type="submit" className="red-border-button" >Sign in</button>
+          </form>
+        </div>
+        <HomeButton />
       </div>
     </div>
   );
