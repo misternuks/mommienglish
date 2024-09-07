@@ -1,4 +1,4 @@
-.members-workshop-container {
+.members-workshops-container {
   display: flex;
   align-items: start;
   justify-content: center;
@@ -7,7 +7,7 @@
   padding: 64px;
 }
 
-.members-new-workshop-container {
+.members-new-workshops-container {
   width: 100%;
   max-width: 1000px;
   display: flex;
@@ -16,7 +16,7 @@
   justify-content: space-evenly;
 }
 
-.members-new-workshop {
+.members-new-workshops {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +26,7 @@
   }
 
 
-.members-new-workshop-thumbnail {
+.members-new-workshops-thumbnail {
   width: 200px;
   height: auto;
   display: flex;
@@ -39,7 +39,7 @@
   transition: 0.5s ease;
 }
 
-.members-new-workshop-thumbnail:hover {
+.members-new-workshops-thumbnail:hover {
   cursor: pointer;
   opacity: 100%;
   transform: scale(1.02);
@@ -50,11 +50,11 @@
 }
 
 @media (max-width: 700px) {
-  .members-workshop-container {
+  .members-workshops-container {
     padding: 32px;
   }
 
-  .members-new-workshop-container {
+  .members-new-workshops-container {
     width: 100%;
   }
 }

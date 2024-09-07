@@ -4,10 +4,10 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import styles from './MembersLessons.module.css'
+import styles from './MembersWorkshops.module.css'
 import Image from 'next/image';
 
-export default function MembersLessons() {
+export default function MembersWorkshops() {
 
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -27,27 +27,25 @@ export default function MembersLessons() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const thumbnailText = "The first lesson is coming soon! Stay tuned!";
-
   return (
     <motion.section
       ref={ref}
       animate={controls}
       initial="hidden"
       variants={variants}
-      id='members-lessons'
+      id='members-workshops'
     >
-      <div className={styles['members-lessons-container']}>
-        <div className={styles['members-new-lessons-container']}>
-          <h2 id="lessons" className="members-header">new lessons</h2>
-          <div className={styles['members-new-lessons']}>
-              <Image
-                src="/images/coming_soon_lessons.png"
-                alt="lessons coming soon"
-                width={280}
-                height={160}
-                className={styles['members-image']}
-              />
+      <div className={styles['members-workshops-container']}>
+        <div className={styles['members-new-workshops-container']}>
+          <h2 id="workshops" className="members-header">workshops / events</h2>
+          <div className={styles['members-new-workshops']}>
+            <Image
+              src="/images/coming_soon_workshops.png"
+              alt="lessons coming soon"
+              width={280}
+              height={160}
+              className={styles['members-image']}
+            />
           </div>
         </div>
       </div>

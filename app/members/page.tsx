@@ -7,7 +7,7 @@ import Image from 'next/image';
 import MembersNavbar from './MembersNavbar';
 import MembersCalendar from './MembersCalendar';
 import MembersLessons from './MembersLessons';
-import MembersWorkshop from './MembersWorkshop';
+import MembersWorkshops from './MembersWorkshops';
 import MembersContact from './MembersContact';
 import Footer from '../components/footer';
 
@@ -71,7 +71,7 @@ export default function Members() {
       <MembersNavbar />
       <MembersCalendar />
       <MembersLessons />
-      <MembersWorkshop />
+      <MembersWorkshops />
       <MembersContact />
       <Footer />
     </main>

@@ -42,13 +42,11 @@ export default function MembersContact() {
             <p>レッスンや交流会、<wbr />ワークショップなどどんなことでも</p>
             <p>質問やご要望がありましたら<wbr />お気軽にお問い合わせください</p>
           </div>
-          <button className="red-button">
-            <a target="_blank"
-              href="https://forms.gle/1Av7cpG1hpMKSNq27"
-            >
-              お問い合わせはこちら
-            </a>
-          </button>
+          <a className="red-button" target="_blank"
+            href="https://forms.gle/1Av7cpG1hpMKSNq27"
+          >
+            お問い合わせはこちら
+          </a>
         </div>
         <div className={styles['members-contact-us']}>
         <h2 id="contact" className="members-header">1 on 1セッション予約</h2>
@@ -57,13 +55,11 @@ export default function MembersContact() {
             <p>予約はこちらからできます。</p>
             <p>※別サイトに移行します。</p>
           </div>
-          <button className="red-button">
-            <a target="_blank"
-              href="https://app.spirinc.com/patterns/availability-sharing/9bCh-7cwPGilEnrwby9Vz/confirm"
-            >
-              予約する
-            </a>
-          </button>
+          <a className="red-button" target="_blank"
+            href="https://app.spirinc.com/patterns/availability-sharing/9bCh-7cwPGilEnrwby9Vz/confirm"
+          >
+            予約する
+          </a>
         </div>
       </div>
     </motion.section>
