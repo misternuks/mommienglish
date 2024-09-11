@@ -26,27 +26,29 @@
   }
 
 
-.members-new-workshops-thumbnail {
-  width: 200px;
+.members-new-workshop-card {
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  text-align: justify;
-  opacity: 80%;
+  text-align: center;
+  font-size: 26px;
+}
+
+.members-new-workshop-image {
+  margin-bottom: 8px;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.2);
+  opacity: 75%;
   transition: 0.5s ease;
 }
 
-.members-new-workshops-thumbnail:hover {
+.members-new-workshop-image:hover {
   cursor: pointer;
   opacity: 100%;
-  transform: scale(1.02);
-}
-
-.members-image {
-  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
