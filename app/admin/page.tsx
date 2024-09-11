@@ -1,7 +1,6 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route"; // Adjust the path if needed
-
+import { authOptions } from "../api/auth/[...nextauth]/authOptions";
 export default async function AdminDashboard() {
   // Check if the user is authenticated and is an admin
   const session = await getServerSession(authOptions);
