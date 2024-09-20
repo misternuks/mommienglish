@@ -40,42 +40,61 @@ export default function MembersLessons() {
           <h2 id="lessons" className="members-header">new lessons</h2>
           <div className={styles['members-new-lessons']}>
             <div className={styles['members-new-lesson-card']}>
-            <a
-              href="https://zoom.us/rec/share/ZkSIKDgK9ZmWckVDsRxW4uOnch6LKFWsYTjB7n28kRs2B1GZV-B5sKMg_0qDGCUq.fp23ZqHIJRoKvdks"
-              target="_blank"
-            >
-              <Image
-                src="/images/lesson_01_image.png"
-                alt="lesson 1"
-                width={280}
-                height={160}
-                className={styles['members-new-lesson-image']}
-              />
-            </a>
-            <p>
-              Day 1 for Wednesday class<br />
-              『Morning routine』<br />
-              Password : me!20240911<br />
-            </p>
+              <a
+                href="https://zoom.us/rec/share/ZkSIKDgK9ZmWckVDsRxW4uOnch6LKFWsYTjB7n28kRs2B1GZV-B5sKMg_0qDGCUq.fp23ZqHIJRoKvdks"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_01_image.png"
+                  alt="lesson 1"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 1 for Wednesday class<br />
+                『Morning routine』<br />
+                Password : me!20240911<br />
+              </p>
             </div>
             <div className={styles['members-new-lesson-card']}>
-            <a
-              href="https://zoom.us/rec/share/nZIu22TF-QeWXb-6m10x6BaCS8y7jPUDYGNtT9x6TBJPuCc9XN8RDqd83w6rOj_0.tJwbZkjzsBvxb2R_"
-              target="_blank"
-            >
-              <Image
-                src="/images/lesson_01_image.png"
-                alt="lesson 1"
-                width={280}
-                height={160}
-                className={styles['members-new-lesson-image']}
-              />
-            </a>
-            <p>
-              Day 1 for Friday class<br />
-              『Morning routine』<br />
-              Password : me!20240913<br />
-            </p>
+              <a
+                href="https://zoom.us/rec/share/nZIu22TF-QeWXb-6m10x6BaCS8y7jPUDYGNtT9x6TBJPuCc9XN8RDqd83w6rOj_0.tJwbZkjzsBvxb2R_"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_01_image.png"
+                  alt="lesson 1"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 1 for Friday class<br />
+                『Morning routine』<br />
+                Password : me!20240913<br />
+              </p>
+            </div>
+            <div className={styles['members-new-lesson-card']}>
+              <a
+                href="https://zoom.us/rec/share/QDnRC5TDBZxRWNz-_OCQCVeMoA48v9xUW24nbx9W_WvxH_rdHnhJnW1qSQX2Ud7x.hKZEwiA9YXHMnzLy"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_02_image.png"
+                  alt="lesson 1"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 2 for Wednesday class<br />
+                『褒め言葉』<br />
+                Password : me!20240918<br />
+              </p>
             </div>
           </div>
         </div>
