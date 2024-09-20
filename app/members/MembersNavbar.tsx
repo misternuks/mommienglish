@@ -22,7 +22,7 @@ const MembersNavbar = () => {
         <li className="hide-this-bar">|</li>
         <li><a href='#lessons'>Lessons</a></li>
         <li className="hide-this-bar">|</li>
-        <li><a href='#workshop'>Workshop</a></li>
+        <li><a href='#workshops'>Workshops</a></li>
         <li className="hide-this-bar">|</li>
         <li><a href='#contact'>Contact</a></li>
       </ul>
