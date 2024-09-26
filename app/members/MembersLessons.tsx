@@ -115,6 +115,25 @@ export default function MembersLessons() {
                 Password : me!20240920<br />
               </p>
             </div>
+            <div className={styles['members-new-lesson-card']}>
+              <a
+                href="https://zoom.us/rec/share/6U76H5lWZiKDN739Lh0Otc8_LBw5d7f194FZXKEPJK4VFeCmqoLSluvJ8UoUi4m6.hcel_3Iq6VjEnk4Y"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_03_image.png"
+                  alt="lesson 1"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 3 for Wednesday class<br />
+                『Before dinner time』<br />
+                Password : me!20240925<br />
+              </p>
+            </div>
           </div>
         </div>
       </div>
