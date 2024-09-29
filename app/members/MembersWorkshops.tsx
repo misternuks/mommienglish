@@ -54,9 +54,28 @@ export default function MembersWorkshops() {
               </a>
               <p>
                 Event #01<br />
-                『Kick-off』<br />
-                Password : me!20240908<br />
+                『<span className={styles['title']}>Kick-off</span>』<br />
+                Password:<span className={styles['password']}> me!20240908</span><br />
               </p>
+            </div>
+            <div className={styles['members-new-workshop-card']}>
+              <a
+                target="_blank"
+                href="https://zoom.us/rec/share/nkz2SWz0a1VPfrkjL286QHe1E13y6lZGi4EQPBUF6eCZ4KlUlrxSK5qvif9egLix.rw7SXkDbRgd9h6pO"
+              >
+                <Image
+                  src="/images/workshop_02_image.jpg"
+                  alt="workshop 02"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-workshop-image']}
+                />
+              </a>
+              <div className={styles['card-text']}>
+                <p>Event #02</p>
+                <p>『<span className={styles['card-title']}>MommiEnglish × Maki先生 小学校英語の実態</span>』</p>
+                <p>Password:<span className={styles['card-password']}> me!20240928</span></p>
+              </div>
             </div>
           </div>
         </div>

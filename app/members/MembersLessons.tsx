@@ -54,8 +54,8 @@ export default function MembersLessons() {
               </a>
               <p>
                 Day 1 for Wednesday class<br />
-                『Morning routine』<br />
-                Password : me!20240911<br />
+                『<span className={styles['title']}>Morning routine</span>』<br />
+                Password:<span className={styles['password']}> me!20240911</span><br />
               </p>
             </div>
             <div className={styles['members-new-lesson-card']}>
@@ -73,8 +73,8 @@ export default function MembersLessons() {
               </a>
               <p>
                 Day 1 for Friday class<br />
-                『Morning routine』<br />
-                Password : me!20240913<br />
+                『<span className={styles['title']}>Morning routine</span>』<br />
+                Password:<span className={styles['password']}> me!20240913</span><br />
               </p>
             </div>
             <div className={styles['members-new-lesson-card']}>
@@ -84,7 +84,7 @@ export default function MembersLessons() {
               >
                 <Image
                   src="/images/lesson_02_image.png"
-                  alt="lesson 1"
+                  alt="lesson 2"
                   width={280}
                   height={160}
                   className={styles['members-new-lesson-image']}
@@ -92,8 +92,8 @@ export default function MembersLessons() {
               </a>
               <p>
                 Day 2 for Wednesday class<br />
-                『褒め言葉』<br />
-                Password : me!20240918<br />
+                『<span className={styles['title']}>褒め言葉</span>』<br />
+                Password:<span className={styles['password']}> me!20240918</span><br />
               </p>
             </div>
             <div className={styles['members-new-lesson-card']}>
@@ -103,7 +103,7 @@ export default function MembersLessons() {
               >
                 <Image
                   src="/images/lesson_02_image.png"
-                  alt="lesson 1"
+                  alt="lesson 2"
                   width={280}
                   height={160}
                   className={styles['members-new-lesson-image']}
@@ -111,18 +111,18 @@ export default function MembersLessons() {
               </a>
               <p>
                 Day 2 for Friday class<br />
-                『褒め言葉』<br />
-                Password : me!20240920<br />
+                『<span className={styles['title']}>褒め言葉</span>』<br />
+                Password:<span className={styles['password']}> me!20240920</span><br />
               </p>
             </div>
             <div className={styles['members-new-lesson-card']}>
               <a
-                href="https://zoom.us/rec/share/6U76H5lWZiKDN739Lh0Otc8_LBw5d7f194FZXKEPJK4VFeCmqoLSluvJ8UoUi4m6.hcel_3Iq6VjEnk4Y"
+                href="https://zoom.s/rec/share/6U76H5lWZiKDN739Lh0Otc8_LBw5d7f194FZXKEPJK4VFeCmqoLSluvJ8UoUi4m6.hcel_3Iq6VjEnk4Y"
                 target="_blank"
               >
                 <Image
                   src="/images/lesson_03_image.png"
-                  alt="lesson 1"
+                  alt="lesson 3"
                   width={280}
                   height={160}
                   className={styles['members-new-lesson-image']}
@@ -130,8 +130,27 @@ export default function MembersLessons() {
               </a>
               <p>
                 Day 3 for Wednesday class<br />
-                『Before dinner time』<br />
-                Password : me!20240925<br />
+                『<span className={styles['title']}>Before dinner time</span>』<br />
+                Password:<span className={styles['password']}> me!20240925</span><br />
+              </p>
+            </div>
+            <div className={styles['members-new-lesson-card']}>
+              <a
+                href="https://zoom.us/rec/share/2kj5atV3fKNhCueTGcSWV1FL-3gwLzoaBtxc_lcO-gZMiIDoCxIWkASGwWu6mnij.a9K_oAUcLl0CT5mj"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_03_image.png"
+                  alt="lesson 3"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 3 for Friday class<br />
+                『<span className={styles['title']}>Before dinner time</span>』<br />
+                Password :<span className={styles['password']}> me!20240927</span><br />
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   justify-content: space-evenly;
   gap: 32px;
   }
@@ -35,8 +35,21 @@
   align-items: center;
   gap: 8px;
   text-align: center;
-  font-size: 26px;
+  font-size: 18px;
   margin-bottom: 32px;
+}
+
+.members-new-workshop-card .card-text {
+  width: 280px;
+}
+
+.members-new-workshop-card .card-title {
+  font-weight: bolder;
+  color: #FF5757;
+}
+
+.members-new-workshop-card .card-password {
+  font-size: 14px;
 }
 
 .members-new-workshop-image {

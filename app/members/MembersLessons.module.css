@@ -34,8 +34,17 @@
   align-items: center;
   gap: 8px;
   text-align: center;
-  font-size: 26px;
+  font-size: 18px;
   margin-bottom: 32px
+}
+
+.members-new-lesson-card .title {
+  font-weight: bolder;
+  color: #FF5757;
+}
+
+.password {
+  font-size: 14px;
 }
 
 .members-new-lesson-image {
