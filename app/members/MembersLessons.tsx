@@ -117,7 +117,7 @@ export default function MembersLessons() {
             </div>
             <div className={styles['members-new-lesson-card']}>
               <a
-                href="https://zoom.s/rec/share/6U76H5lWZiKDN739Lh0Otc8_LBw5d7f194FZXKEPJK4VFeCmqoLSluvJ8UoUi4m6.hcel_3Iq6VjEnk4Y"
+                href="https://zoom.us/rec/share/cCHWypKSZI_f2toYqqXbDt7OFeOd5mHcGo9K9zZ6FmZd7ZZD7rx1_h9bjeo43Aiz.WP99pWMsGMJKKqZU"
                 target="_blank"
               >
                 <Image
@@ -151,6 +151,25 @@ export default function MembersLessons() {
                 Day 3 for Friday class<br />
                 『<span className={styles['title']}>Before dinner time</span>』<br />
                 Password :<span className={styles['password']}> me!20240927</span><br />
+              </p>
+            </div>
+            <div className={styles['members-new-lesson-card']}>
+              <a
+                href="https://zoom.us/rec/share/jybSaTumU0Z-kU4YdkoRKvTaVtHQFNDBcVhS6Ovv2wrER2JqViDUQMP4hYwIETwK.GWAjClu6YbbwZ-Is"
+                target="_blank"
+              >
+                <Image
+                  src="/images/lesson_04_image.png"
+                  alt="lesson 4"
+                  width={280}
+                  height={160}
+                  className={styles['members-new-lesson-image']}
+                />
+              </a>
+              <p>
+                Day 4 for Wednesday class<br />
+                『<span className={styles['title']}>Before bed time</span>』<br />
+                Password :<span className={styles['password']}> me!20241002</span><br />
               </p>
             </div>
           </div>
