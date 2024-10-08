@@ -28,3 +28,25 @@ model MembersLesson {
   link      String
   createdAt DateTime  @default(now())
 }
+
+model Lesson {
+  id        Int      @id @default(autoincrement())
+  href      String   // Link to the lesson (e.g., Zoom recording)
+  heading   String   // Lesson heading (e.g., "Day 4 for Friday Class")
+  title     String   // Lesson title (e.g., "Before bedtime")
+  password  String   // Text password displayed (not for auth purposes)
+  imageUrl  String   // URL for the lesson image (from Cloudinary)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Workshop {
+  id        Int      @id @default(autoincrement())
+  href      String   // Link to the workshop
+  heading   String   // Workshop heading
+  title     String   // Workshop title
+  password  String   // Text password displayed
+  imageUrl  String   // URL for the workshop image (from Cloudinary)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
