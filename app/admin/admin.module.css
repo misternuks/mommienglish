@@ -1,0 +1,108 @@
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.container h1 {
+  color: #00CCCC;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.table {
+  width: auto;
+  border-collapse: collapse;
+  margin: 16px;
+  background-color: #fefae2;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table th,
+.table td {
+  border: 2px dotted #FAEB98;
+  padding: 8px;
+}
+
+.createButton,
+.editButton,
+.deleteButton,
+.backButton {
+  padding: 8px 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.createButton {
+  background-color: #00CCCC;
+  color: white;
+  font-weight: 900;
+}
+
+.editButton {
+  background-color: #FAEB98;
+
+}
+
+.deleteButton {
+  background-color: #FF5757;
+  color: white;
+}
+
+.backButton {
+  background-color: #FFD6DD;
+  color: #5F5F5F;
+  margin-top: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 480px;
+  background-color: #fefae2;
+  padding: 16px;
+  border: 1px solid #FAEB98;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 16px;
+}
+
+.form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form label {
+  margin: 8px;
+  font-weight: bold;
+}
+
+.form input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px dotted #FAEB98;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imageEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.imageInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+}

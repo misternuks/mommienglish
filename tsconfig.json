@@ -22,6 +22,6 @@
     },
     "typeRoots": ["./types", "./node_modules/@types"], // Include the types folder here
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/seed.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/seed.js", "types/workshop.js"],
   "exclude": ["node_modules"]
 }
