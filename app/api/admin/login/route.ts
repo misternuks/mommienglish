@@ -21,9 +21,13 @@ export async function POST(req: Request) {
         { expiresIn: '1h' }
       );
 
+      const isProduction = process.env.NODE_ENV === 'production';
+      const domain = isProduction ? 'mommienglish.com' : 'localhost';
+
       // Set the token in a cookie
       const response = NextResponse.json({ message: 'Login successful' });
-      response.headers.set('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600`);
+      const secure = process.env.NODE_ENV === 'production';
+      response.headers.set('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600; ${secure ? 'Secure' : ''}`);
 
       console.log('Token generated:', token);  // Add this to verify the token is being generated
       console.log('Setting cookie:', `token=${token}`);
