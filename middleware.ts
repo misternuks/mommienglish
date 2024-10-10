@@ -35,6 +35,11 @@ async function verifyJwt(token: string, secret: string) {
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value;
 
+  // Exclude /admin/login route from middleware protection
+  if (req.nextUrl.pathname === '/admin/login') {
+    return NextResponse.next();
+  }
+
   if (!token) {
     return NextResponse.redirect(new URL('/admin/login', req.url));
   }
