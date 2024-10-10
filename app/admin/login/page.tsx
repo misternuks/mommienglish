@@ -23,6 +23,7 @@ export default function AdminLoginPage() {
     if (res.ok) {
       const data = await res.json();
       console.log('Login successful, response:', data); // Debug: Check the server response
+      console.log('Login successful, redirecting to dashboard');
       router.push('/admin/dashboard'); // Redirect after successful login
     } else {
       const data = await res.json();

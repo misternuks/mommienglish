@@ -1,46 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { verify, JwtPayload } from 'jsonwebtoken';
 
-// Helper function to decode JWT using Web Crypto API
-async function verifyJwt(token: string, secret: string) {
-  const encoder = new TextEncoder();
-  const keyData = encoder.encode(secret);
-
-  const key = await crypto.subtle.importKey(
-    'raw',
-    keyData,
-    { name: 'HMAC', hash: 'SHA-256' },
-    true,
-    ['verify']
-  );
-
-  const [header, payload, signature] = token.split('.');
-  const data = `${header}.${payload}`;
-
-  const signatureArray = Uint8Array.from(atob(signature), (c) => c.charCodeAt(0));
-
-  const valid = await crypto.subtle.verify(
-    'HMAC',
-    key,
-    signatureArray,
-    new TextEncoder().encode(data)
-  );
-
-  if (!valid) throw new Error('Invalid token signature');
-
-  const decodedPayload = JSON.parse(atob(payload));
-
-  return decodedPayload;
+// Define your custom JWT payload type
+interface AdminJwtPayload extends JwtPayload {
+  isAdmin: boolean;
 }
 
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value;
-
-  console.log('JWT_SECRET in production:', process.env.JWT_SECRET);
-
-  // Exclude /admin/login route from middleware protection
-  if (req.nextUrl.pathname === '/admin/login') {
-    return NextResponse.next();
-  }
 
   if (!token) {
     return NextResponse.redirect(new URL('/admin/login', req.url));
@@ -52,15 +19,15 @@ export async function middleware(req: NextRequest) {
       throw new Error('JWT_SECRET is not defined');
     }
 
-    // Verify token using Web Crypto API
-    const decoded = await verifyJwt(token, jwtSecret);
+    // Verify the JWT token and cast it as AdminJwtPayload
+    const decoded = verify(token, jwtSecret) as AdminJwtPayload;
 
-    // Check if the user is an admin
+    // Now TypeScript knows that decoded has the property isAdmin
     if (!decoded.isAdmin) {
       return NextResponse.redirect(new URL('/admin/login', req.url));
     }
   } catch (error) {
-    console.error('Error verifying token:', error);
+    console.error('Error verifying token: ', error);
     return NextResponse.redirect(new URL('/admin/login', req.url));
   }
 
@@ -68,5 +35,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/admin/:path*'],  // Apply middleware to all /admin routes
 };
