@@ -1,31 +1,38 @@
-// app/api/admin/login/route.ts
-import { NextRequest, NextResponse } from 'next/server';
-import bcrypt from 'bcrypt'
-import prisma from '@/prisma'; // Adjust the import based on your prisma client path
+import { NextResponse } from 'next/server';
+import bcrypt from 'bcrypt'; // Ensure bcrypt is installed
+import prisma from '@/prisma'; // Adjust based on your Prisma setup
+import jwt from 'jsonwebtoken';
 
-export async function POST(req: NextRequest) {
-  try {
-    const { email, password } = await req.json();
+export async function POST(req: Request) {
+  const { email, password } = await req.json();  // Use req.json() directly in App Router API routes
 
-    // Fetch the user from the database
-    const user = await prisma.user.findUnique({ where: { email } });
+  const user = await prisma.user.findUnique({ where: { email } });
 
-    if (user && user.isAdmin) {
-      // Compare the password
-      const isMatch = await bcrypt.compare(password, user.password);
-
-      if (isMatch) {
-        // Set a session cookie or token
-        // For simplicity, we can use a JWT or Next.js middleware for sessions
-        // Here, we'll set a simple cookie (not secure for production)
-        const response = NextResponse.json({ success: true });
-        response.cookies.set('admin-auth', 'authenticated', { httpOnly: true, path: '/' });
-        return response;
+  if (user && bcrypt.compareSync(password, user.password)) {
+    if (user.isAdmin) {
+      const jwtSecret = process.env.JWT_SECRET;
+      if (!jwtSecret) {
+        return NextResponse.json({ message: 'JWT_SECRET is not defined' }, { status: 500 });
       }
-    }
 
-    return NextResponse.json({ success: false }, { status: 401 });
-  } catch (error) {
-    return NextResponse.json({ success: false }, { status: 500 });
+      const token = jwt.sign(
+        { id: user.id, email: user.email, isAdmin: user.isAdmin },
+        jwtSecret,
+        { expiresIn: '1h' }
+      );
+
+      // Set the token in a cookie
+      const response = NextResponse.json({ message: 'Login successful' });
+      response.headers.set('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600`);
+
+      console.log('Token generated:', token);  // Add this to verify the token is being generated
+      console.log('Setting cookie:', `token=${token}`);
+
+      return response;
+    } else {
+      return NextResponse.json({ message: 'Access denied' }, { status: 403 });
+    }
+  } else {
+    return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
   }
 }

@@ -1,7 +1,9 @@
+//app/admin/login/page.tsx
 'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from '../admin.module.css';
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -19,18 +21,19 @@ export default function AdminLoginPage() {
     });
 
     if (res.ok) {
-      // Redirect to the admin dashboard
-      router.push('/admin/dashboard');
+      const data = await res.json();
+      console.log('Login successful, response:', data); // Debug: Check the server response
+      router.push('/admin/dashboard'); // Redirect after successful login
     } else {
-      // Handle login failure (e.g., show an error message)
-      alert('Invalid credentials');
+      const data = await res.json();
+      alert(`Login failed: ${data.message}`);
     }
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Admin Login</h1>
-      <form onSubmit={handleLogin}>
+      <form className={styles.form} onSubmit={handleLogin}>
         <div>
           <label>Email:</label>
           <input
@@ -50,7 +53,7 @@ export default function AdminLoginPage() {
             minLength={8}
           />
         </div>
-        <button type="submit">Login</button>
+        <button className={styles.createButton} type="submit">Login</button>
       </form>
     </div>
   );
