@@ -36,6 +36,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#prisma seeds and scripts
-seed.js
-resetPassword.js
+# Prisma seeds and scripts
+/Prisma/seeds.js
+/Prisma/resetPassword.js

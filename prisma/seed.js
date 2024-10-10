@@ -5,13 +5,13 @@ const bcrypt = require('bcrypt');
 const prisma = new PrismaClient();
 
 async function main() {
-  const hashedPassword = await bcrypt.hash('Buntal0ve', 10);
+  const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
 
   await prisma.user.upsert({
-    where: { email: 'moenaminer1029@gmail.com' }, // Change to your admin email
+    where: { email: process.env.ADMIN_EMAIL }, // Change to your admin email
     update: {},
     create: {
-      email: 'moenaminer1029@gmail.com',
+      email: process.env.ADMIN_EMAIL,
       password: hashedPassword,
       isAdmin: true,
     },

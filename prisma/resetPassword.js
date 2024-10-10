@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';  // Import bcryptjs for password hashing
 const prisma = new PrismaClient();  // Initialize Prisma Client
 
 async function updateAdminPassword() {
-  const plainPassword = 'Buntal0ve';  // Replace with the actual plain text password
+  const plainPassword = process.env.ADMIN_PASSWORD;  // Replace with the actual plain text password
 
   // Use bcryptjs to hash the password with saltRounds = 10 (a good balance for production)
   const hashedPassword = bcrypt.hashSync(plainPassword, 10);
@@ -13,7 +13,7 @@ async function updateAdminPassword() {
 
   // Update the password in the database for the admin user
   await prisma.user.update({
-    where: { email: 'moenaminer1029@gmail.com' },  // Adjust the email to match your admin user's email
+    where: { email: process.env.ADMIN_EMAIL },  // Adjust the email to match your admin user's email
     data: { password: hashedPassword },  // Update the password field with the new hashed password
   });
 
