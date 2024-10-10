@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       // Set the token in a cookie
       const response = NextResponse.json({ message: 'Login successful' });
       const secure = process.env.NODE_ENV === 'production';
-      response.headers.set('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600; ${secure ? 'Secure' : ''}`);
+      response.headers.set('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600; Domain=${domain}; ${isProduction ? 'Secure' : ''}`);
 
       console.log('Token generated:', token);  // Add this to verify the token is being generated
       console.log('Setting cookie:', `token=${token}`);
