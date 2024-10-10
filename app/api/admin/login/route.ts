@@ -6,6 +6,8 @@ import jwt from 'jsonwebtoken';
 export async function POST(req: Request) {
   console.log('Login route hit');
   const { email, password } = await req.json();
+  console.log('Password provided:', password);
+
 
   // Find the user by email
   const user = await prisma.user.findUnique({ where: { email } });
@@ -15,12 +17,13 @@ export async function POST(req: Request) {
   }
 
   // Compare the provided password with the hashed password from the database
-  const isPasswordCorrect = bcrypt.compareSync(password, user.password);
-  if (!isPasswordCorrect) {
+  if (bcrypt.compareSync(password, user.password)) {
+    console.log('Password matches for user:', user.email);
+    // Token generation and login logic here
+  } else {
+    console.log('Password does not match for user:', user.email);
     return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
   }
-
-  console.log('Password matches for user:', user.email);
 
   // Ensure JWT_SECRET is defined
   const jwtSecret = process.env.JWT_SECRET;
