@@ -9,6 +9,10 @@ interface AdminJwtPayload extends JwtPayload {
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value;
 
+  if (req.nextUrl.pathname === '/admin/login') {
+    return NextResponse.next();
+  }
+
   if (!token) {
     return NextResponse.redirect(new URL('/admin/login', req.url));
   }
