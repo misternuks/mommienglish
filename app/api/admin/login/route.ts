@@ -4,6 +4,7 @@ import prisma from '@/prisma';  // Adjust this path based on your Prisma setup
 import jwt from 'jsonwebtoken';
 
 export async function POST(req: Request) {
+  console.log('Login route hit');
   const { email, password } = await req.json();
 
   // Find the user by email
