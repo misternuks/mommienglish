@@ -1,9 +1,13 @@
+// middleware.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { verify, JwtPayload } from 'jsonwebtoken';
+import { jwtVerify } from 'jose';
 
 // Define your custom JWT payload type
-interface AdminJwtPayload extends JwtPayload {
+interface AdminJwtPayload {
+  id: string;
+  email: string;
   isAdmin: boolean;
+  // Add any other fields you include in the JWT payload
 }
 
 export async function middleware(req: NextRequest) {
@@ -23,11 +27,15 @@ export async function middleware(req: NextRequest) {
       throw new Error('JWT_SECRET is not defined');
     }
 
-    // Verify the JWT token and cast it as AdminJwtPayload
-    const decoded = verify(token, jwtSecret) as AdminJwtPayload;
+    // Convert the secret to a Uint8Array as required by jose
+    const encoder = new TextEncoder();
+    const secret = encoder.encode(jwtSecret);
 
-    // Now TypeScript knows that decoded has the property isAdmin
-    if (!decoded.isAdmin) {
+    // Verify the JWT token
+    const { payload } = await jwtVerify(token, secret);
+
+    // Now TypeScript knows that payload has the property isAdmin
+    if (!payload.isAdmin) {
       return NextResponse.redirect(new URL('/admin/login', req.url));
     }
   } catch (error) {
@@ -39,5 +47,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],  // Apply middleware to all /admin routes
+  matcher: ['/admin/:path*'], // Apply middleware to all /admin routes
 };
