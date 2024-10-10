@@ -52,6 +52,7 @@ export async function middleware(req: NextRequest) {
 
     // Verify token using Web Crypto API
     const decoded = await verifyJwt(token, jwtSecret);
+    console.log('JWT_SECRET in production:', process.env.JWT_SECRET);
 
     // Check if the user is an admin
     if (!decoded.isAdmin) {
