@@ -28,6 +28,7 @@ export default function MembersLessons() {
       const res = await fetch('/api/members/lessons');
       if (res.ok) {
         const data: Lesson[] = await res.json();
+        console.log(data);  //Debug
         setLessons(data);
       } else {
         alert('Failed to fetch lessons.');
