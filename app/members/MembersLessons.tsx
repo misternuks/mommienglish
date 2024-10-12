@@ -16,7 +16,8 @@ interface Lesson {
   imageUrl: string;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) =>
+  fetch(url, { credentials: 'include' }).then((res) => res.json());
 
 export default function MembersLessons() {
   const controls = useAnimation();
