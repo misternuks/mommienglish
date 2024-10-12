@@ -1,9 +1,9 @@
 // middleware.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { jwtVerify } from 'jose';
+import { jwtVerify, JWTPayload } from 'jose';
 
 // Define your custom JWT payload type
-interface AdminJwtPayload {
+interface AdminJwtPayload extends JWTPayload {
   id: string;
   email: string;
   isAdmin: boolean;
@@ -34,8 +34,16 @@ export async function middleware(req: NextRequest) {
     // Verify the JWT token
     const { payload } = await jwtVerify(token, secret);
 
-    // Now TypeScript knows that payload has the property isAdmin
-    if (!payload.isAdmin) {
+    // Cast payload to AdminJwtPayload
+    const adminPayload = payload as AdminJwtPayload;
+
+    // Validate the payload properties
+    if (
+      typeof adminPayload.id !== 'string' ||
+      typeof adminPayload.email !== 'string' ||
+      typeof adminPayload.isAdmin !== 'boolean' ||
+      !adminPayload.isAdmin
+    ) {
       return NextResponse.redirect(new URL('/admin/login', req.url));
     }
   } catch (error) {
