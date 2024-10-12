@@ -8,8 +8,21 @@ export async function GET() {
     const lessons: Lesson[] = await prisma.lesson.findMany({
       orderBy: { createdAt: 'desc' },
     });
-    return NextResponse.json(lessons);
+    return NextResponse.json(lessons, {
+      headers: {
+        'Cache-Control': 'no-store',
+      },
+    });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch lessons' }, { status: 500 });
+    console.error('Error fetching lessons:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch lessons' },
+      {
+        status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
   }
 }
