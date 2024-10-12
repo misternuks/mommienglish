@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import useSWR from 'swr';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
@@ -15,28 +16,13 @@ interface Lesson {
   imageUrl: string;
 }
 
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 export default function MembersLessons() {
-  const [lessons, setLessons] = useState<Lesson[]>([]);
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger when 10% of the component is in view
   });
-
-  // Fetch lessons when the component mounts
-  useEffect(() => {
-    const fetchLessons = async () => {
-      const baseUrl = window.location.origin;
-      const res = await fetch(`${baseUrl}/api/members/lessons`);
-      if (res.ok) {
-        const data = await res.json();
-        setLessons(data);
-      } else {
-        alert('Failed to fetch lessons.');
-      }
-    };
-
-    fetchLessons();
-  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -50,6 +36,14 @@ export default function MembersLessons() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
+
+  const { data: lessons, error } = useSWR<Lesson[]>('/api/members/lessons', fetcher, {
+    revalidateOnFocus: true, // Revalidate when window gains focus
+    revalidateOnReconnect: true, // Revalidate when reconnecting
+  });
+
+  if (error) return <div>Failed to load lessons.</div>;
+  if (!lessons) return <div>Loading...</div>;
 
   return (
     <motion.section

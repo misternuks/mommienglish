@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import styles from './MembersWorkshops.module.css';
+import useSWR from 'swr';
 
 interface Workshop {
   id: number;
@@ -15,28 +16,13 @@ interface Workshop {
   imageUrl: string;
 }
 
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 export default function MembersWorkshops() {
-  const [workshops, setWorkshops] = useState<Workshop[]>([]);
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger when 10% of the component is in view
   });
-
-  // Fetch workshops when the component mounts
-  useEffect(() => {
-    const fetchWorkshops = async () => {
-      const baseUrl = window.location.origin;
-      const res = await fetch(`${baseUrl}/api/members/workshops`);
-      if (res.ok) {
-        const data = await res.json();
-        setWorkshops(data);
-      } else {
-        alert('Failed to fetch workshops.');
-      }
-    };
-
-    fetchWorkshops();
-  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -50,6 +36,14 @@ export default function MembersWorkshops() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
+
+  const { data: workshops, error } = useSWR<Workshop[]>('/api/members/workshops', fetcher, {
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
+  });
+
+  if (error) return <div>Failed to load workshops.</div>;
+  if (!workshops) return <div>Loading...</div>;
 
   return (
     <motion.section
