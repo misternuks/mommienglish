@@ -29,6 +29,11 @@ export default function Members() {
     return <div>Loading...</div>
   }
 
+  // Ensure the session is established
+  if (!session) {
+    return <div>Redirecting to sign in...</div>;
+  }
+
   return (
     <main id="members-page">
       <div className={styles["member-banner"]}>
