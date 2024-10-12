@@ -25,7 +25,7 @@ export default function MembersLessons() {
   // Fetch lessons when the component mounts
   useEffect(() => {
     const fetchLessons = async () => {
-      const res = await fetch('/api/members/lessons');
+      const res = await fetch('../api/members/lessons');
       if (res.ok) {
         const data: Lesson[] = await res.json();
         console.log(data);  //Debug
