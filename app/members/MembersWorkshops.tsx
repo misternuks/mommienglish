@@ -37,7 +37,8 @@ export default function MembersWorkshops() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const { data: workshops, error } = useSWR<Workshop[]>('/api/members/workshops', fetcher, {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+  const { data: workshops, error } = useSWR<Workshop[]>(`${baseUrl}/api/members/workshops`, fetcher, {
     revalidateOnFocus: true,
     revalidateOnReconnect: true,
   });

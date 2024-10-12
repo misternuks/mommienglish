@@ -36,8 +36,8 @@ export default function MembersLessons() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
-
-  const { data: lessons, error } = useSWR<Lesson[]>('/api/members/lessons', fetcher, {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+  const { data: lessons, error } = useSWR<Lesson[]>(`${baseUrl}/api/members/lessons`, fetcher, {
     revalidateOnFocus: true, // Revalidate when window gains focus
     revalidateOnReconnect: true, // Revalidate when reconnecting
   });
