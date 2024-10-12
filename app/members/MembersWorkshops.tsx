@@ -25,9 +25,10 @@ export default function MembersWorkshops() {
   // Fetch workshops when the component mounts
   useEffect(() => {
     const fetchWorkshops = async () => {
-      const res = await fetch('../api/members/workshops');
+      const baseUrl = window.location.origin;
+      const res = await fetch(`${baseUrl}/api/members/workshops`);
       if (res.ok) {
-        const data: Workshop[] = await res.json();
+        const data = await res.json();
         setWorkshops(data);
       } else {
         alert('Failed to fetch workshops.');
