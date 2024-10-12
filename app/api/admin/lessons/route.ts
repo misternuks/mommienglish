@@ -7,12 +7,20 @@ export async function GET() {
     const lessons = await prisma.lesson.findMany({
       orderBy: { createdAt: 'desc' },
     });
-    return NextResponse.json(lessons);
+    return NextResponse.json(lessons, {
+      headers: {
+        'Cache-Control': 'no-store',
+      },
+    });
   } catch (error) {
     console.error('Error fetching lessons:', error);
     return NextResponse.json(
       { error: 'Failed to fetch lessons' },
-      { status: 500 }
+      { status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+       }
     );
   }
 }
@@ -23,7 +31,14 @@ export async function POST(request: Request) {
 
     // Basic validation
     if (!href || !heading || !title || !password || !imageUrl) {
-      return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'All fields are required' },
+          { status: 400,
+            headers: {
+            'Cache-Control': 'no-store',
+          },
+        }
+      );
     }
 
     // Create a new lesson
@@ -31,9 +46,21 @@ export async function POST(request: Request) {
       data: { href, heading, title, password, imageUrl },
     });
 
-    return NextResponse.json(lesson, { status: 201 });
+    return NextResponse.json(lesson,
+      { status: 201,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      });
   } catch (error) {
     console.error('Error creating lesson:', error);
-    return NextResponse.json({ error: 'Failed to create lesson' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to create lesson' },
+      { status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
   }
 }

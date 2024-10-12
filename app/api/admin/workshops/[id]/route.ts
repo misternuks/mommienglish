@@ -1,3 +1,4 @@
+//app/api/admin/workshops/[id]/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/prisma';
 
@@ -10,12 +11,30 @@ export async function GET(
       where: { id: Number(params.id) },
     });
     if (workshop) {
-      return NextResponse.json(workshop);
+      return NextResponse.json(workshop, {
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      });
     } else {
-      return NextResponse.json({ error: 'Workshop not found' }, { status: 404 });
+      return NextResponse.json(
+        { error: 'Workshop not found' },
+        { status: 404,
+          headers: {
+            'Cache-Control': 'no-store',
+          },
+        }
+      );
     }
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch workshop' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch workshop' },
+      { status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
   }
 }
 
@@ -28,7 +47,14 @@ export async function PUT(
 
     // Basic validation
     if (!href || !heading || !title || !password || !imageUrl) {
-      return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400,
+          headers: {
+            'Cache-Control': 'no-store',
+          },
+        }
+      );
     }
 
     const updatedWorkshop = await prisma.workshop.update({
@@ -36,10 +62,21 @@ export async function PUT(
       data: { href, heading, title, password, imageUrl },
     });
 
-    return NextResponse.json(updatedWorkshop);
+    return NextResponse.json(updatedWorkshop, {
+      headers: {
+        'Cache-Control': 'no-store',
+      },
+    });
   } catch (error) {
     console.error('Error updating workshop:', error);
-    return NextResponse.json({ error: 'Failed to update workshop' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to update workshop' },
+      { status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
   }
 }
 
@@ -51,8 +88,20 @@ export async function DELETE(
     await prisma.workshop.delete({
       where: { id: Number(params.id) },
     });
-    return NextResponse.json({ message: 'Workshop deleted' });
+    return NextResponse.json(
+      { message: 'Workshop deleted' },
+      {headers: {
+        'Cache-Control': 'no-store',
+      },
+    });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to delete workshop' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to delete workshop' },
+      { status: 500,
+        headers: {
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
   }
 }
