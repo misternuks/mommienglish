@@ -2,35 +2,35 @@
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Calendar, momentLocalizer } from 'react-big-calendar'; // removed dateFnsLocalizer
-// import { format, parse, startOfWeek, getDay } from 'date-fns';
 import moment from 'moment';
-import enUS from 'date-fns/locale/en-US';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from './MembersCalendar.module.scss'
 
-import { ToolbarProps } from 'react-big-calendar';
+// import { ToolbarProps } from 'react-big-calendar';
+// import { format, parse, startOfWeek, getDay } from 'date-fns';
+// import enUS from 'date-fns/locale/en-US';
 
-function CustomToolbar({ onNavigate, label }: ToolbarProps<EventType, object>) {
-  return (
-    <div className="custom-toolbar">
-      <button onClick={() => onNavigate('PREV')}>Back</button>
-      <span>{label}</span>
-      <button onClick={() => onNavigate('NEXT')}>Next</button>
-    </div>
-  );
-}
+// function CustomToolbar({ onNavigate, label }: ToolbarProps<EventType, object>) {
+//   return (
+//     <div className="custom-toolbar">
+//       <button onClick={() => onNavigate('PREV')}>Back</button>
+//       <span>{label}</span>
+//       <button onClick={() => onNavigate('NEXT')}>Next</button>
+//     </div>
+//   );
+// }
 
-const locales = { 'en-US': enUS };
-const localizer = momentLocalizer(moment);
+// const locales = { 'en-US': enUS };
 // const localizer = dateFnsLocalizer({
-//   format,
-//   parse,
-//   startOfWeek,
-//   getDay,
-//   locales,
-// });
+  //   format,
+  //   parse,
+  //   startOfWeek,
+  //   getDay,
+  //   locales,
+  // });
+const localizer = momentLocalizer(moment);
 
 type EventType = {
   id: number;
