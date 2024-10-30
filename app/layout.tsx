@@ -1,4 +1,4 @@
-import './globals.css';
+import './globals.scss';
 
 import { Zen_Maru_Gothic} from 'next/font/google';
 

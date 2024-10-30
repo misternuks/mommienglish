@@ -1,23 +1,26 @@
 .members-calendar-container {
   width: 100%;
-  height: auto;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
   padding: 64px;
 }
 
-.members-calendar {
+.rbc-calendar {
+  max-width: 1000px !important;
+  height: auto;
+}
+/* .members-calendar {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.members-calendar-header {
+/* .members-calendar-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
@@ -53,9 +56,9 @@
   padding-top: 8px;
   font-weight: 400;
 
-}
+} */
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .members-calendar-container {
     padding: 8px;
   }
