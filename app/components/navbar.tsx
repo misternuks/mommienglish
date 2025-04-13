@@ -44,18 +44,23 @@ const Navbar = () => {
 
   return (
     <nav id="navbar">
-      <HomeButton />
+      {/* <HomeButton /> */}
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
         ☰
       </button>
       <ul className={isMobileMenuOpen ? 'mobile-menu' : 'desktop-menu'}>
-        <li><a href='/#service'>サービス内容</a></li>
+        <li>Home</li>
+        <li>Our mission</li>
+        <li>Service</li>
+        <li>Voice</li>
+        <li>About me</li>
+        {/* <li><a href='/#service'>サービス内容</a></li>
         <li className="hide-this-bar">|</li>
         <li><a href='/#fee'>料金</a></li>
         <li className="hide-this-bar">|</li>
         <li><a href='/#contact'>お問い合わせ</a></li>
         <li className="hide-this-bar">|</li>
-        <li><a href='/members'>受講生専用Page</a></li>
+        <li><a href='/members'>受講生専用Page</a></li> */}
       </ul>
     </nav>
   );

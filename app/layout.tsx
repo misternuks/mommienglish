@@ -1,6 +1,7 @@
 import './globals.scss';
 
-import { Zen_Maru_Gothic} from 'next/font/google';
+// import { Zen_Maru_Gothic} from 'next/font/google';
+import { Shippori_Mincho } from 'next/font/google';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -16,8 +17,8 @@ import Footer from './components/footer'
 
 config.autoAddCss = false;
 
-const zenMaruGothic = Zen_Maru_Gothic({
-  weight: ['400', '700', '900'],
+const shipporiMincho = Shippori_Mincho({
+  weight: ['400'],
   subsets: ['latin']
 });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" className={zenMaruGothic.className}>
+    <html lang="en" className={shipporiMincho.className}>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

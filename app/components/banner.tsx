@@ -37,20 +37,19 @@ export default function Banner() {
       className = {styles.banner}
     >
       <div className = {styles['banner-content']}>
-        <div>
-
-        </div>
-        <div className = {styles['banner-hero']}>
+        <div className = {styles['banner-left']}>
+          <div>
           <Image
-            src='/images/me_logo.png'
-            alt='Red MommiEnglish Logo'
-            width={150}
-            height={150}
+            src='/images/me_colorful_logo.png'
+            alt='MommiEnglish Logo'
+            width={405}
+            height={76}
             className={styles['']}
           />
+          </div>
           <div>
-          <h2>ママが<span className = 'red-text'>笑</span>っていれば</h2><br />
-          <h2>それだけで<span className = 'red-text'>嬉</span>しい。</h2>
+            <h1>あなたの英語習慣を</h1><br />
+            <span><h1>デザインします</h1></span>
           </div>
           <a
             className = 'red-button'
@@ -59,6 +58,15 @@ export default function Banner() {
           >
             お問い合わせはこちら
           </a>
+        </div>
+        <div className = {styles['banner-right']}>
+          <Image
+            src='/images/banner_moena.png'
+            alt='Photo of Moena'
+            width={622}
+            height={746}
+            className={styles['']}
+          />
         </div>
       </div>
     </motion.section>
